@@ -1,0 +1,12 @@
+.content {
+	padding-top: 6em;
+	padding-bottom: 8rem;
+}
+
+.navbar-nav .nav-link {
+	padding: 0 0.8rem !important;
+}
+
+.fa-user-circle {
+	padding-left: 0.3rem !important;
+}
