@@ -1,4 +1,5 @@
 <?php
+include 'db.php';
 echo '
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +14,6 @@ echo '
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/png" href="img/favicon/favicon.png" />
-
 
     <!--   INI KHUSUS FONT     -->
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -32,5 +32,4 @@ echo '
     <title>MyChoice</title>
 </head>
 
-<body>
 ';
