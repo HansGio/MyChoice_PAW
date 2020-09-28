@@ -3,7 +3,7 @@ include '../../index.php'
 ?>
 
 <div class="container">
-    <div class="col-4">
+    <div class="d-flex justify-content-center">
         <form>
             <h1 class="text-center">Log In</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
