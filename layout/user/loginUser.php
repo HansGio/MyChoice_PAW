@@ -2,9 +2,11 @@
 include '../../navbar.php'
 ?>
 
+
 <div class="container-fluid h-100">
     <div class="d-flex justify-content-center align-items-center">
         <form>
+            <br><br><br><br><br>
             <h1 class="text-center">Log In</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             <div class="form-group">
