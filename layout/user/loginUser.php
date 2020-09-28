@@ -8,7 +8,8 @@ include '../../navbar.php'
             <h1 class="text-center">Log In</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             <div class="form-group">
-                <input type="email" class="form-control" id="email_login" aria-describedby="emailHelp" placeholder="Enter email">
+                <input type="email" class="form-control" id="email_login" aria-describedby="emailHelp"
+                    placeholder="Enter email">
             </div>
             <div class="form-group">
                 <input type="password" class="form-control" id="password_login" placeholder="Password">
