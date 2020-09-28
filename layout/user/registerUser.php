@@ -1,9 +1,10 @@
 <?php
 include '../../index.php'
 ?>
-<div class="container d-flex">
-    <div class="col-4">
+<div class="container">
+    <div class="d-flex justify-content-center">
         <form>
+            <br><br><br><br>
             <h1 class="text-center">Sign Up</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             <div class="form-group">
@@ -11,7 +12,7 @@ include '../../index.php'
             </div>
             <div class="form-group">
                 <input type="email" class="form-control" id="email_register" aria-describedby="emailHelp"
-                    placeholder="Email">
+                    placeholder="Email">-
             </div>
             <div class="form-group">
                 <input type="password" class="form-control" id="birth_date_register" placeholder="Birth Date">
@@ -23,7 +24,7 @@ include '../../index.php'
                 <input type="password" class="form-control" id="password_register" placeholder="Password">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" id="address_register" placeholder="Address">
+                <textarea class="form-control" id="adress_register" rows="3" placeholder="Address"></textarea>
             </div>
             <button type="submit" class="btn btn-secondary col-12">Log In</button>
             <br><br><br><br>
@@ -32,8 +33,6 @@ include '../../index.php'
     </div>
 
 </div>
-
-
 
 </body>
 
