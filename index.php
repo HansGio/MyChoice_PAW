@@ -1,2 +1,2 @@
 <?php
-include 'layout/navbar.php';
+include 'navbar.php';
