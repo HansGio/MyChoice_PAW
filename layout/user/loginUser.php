@@ -3,7 +3,7 @@ include '../../index.php'
 ?>
 
 <div class="container">
-    <div class="col-4 center">
+    <div class="col-4">
         <form>
             <h1 class="text-center">Log In</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -18,7 +18,7 @@ include '../../index.php'
                 <label for="password_input">Password</label>
                 <input type="password" class="form-control" id="password_login" placeholder="Password">
             </div>
-            <button type="submit" class="btn btn-primary">Log In</button>
+            <button type="submit" class="btn btn-primary">Sign In</button>
         </form>
     </div>
 </div>
