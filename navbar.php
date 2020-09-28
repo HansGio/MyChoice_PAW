@@ -8,11 +8,20 @@ echo '
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    // INI FRAMEWORK BOOTSRAP
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/png" href="img/favicon/favicon.png" />
 
+
+    //FONT INI
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+
+    //SCRIPT
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
@@ -24,6 +33,7 @@ echo '
     </script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>MyChoice</title>
+
 </head>
 
 <body>
