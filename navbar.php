@@ -1,8 +1,10 @@
 <?php
-echo '
+include 'index.php'
+?>
+
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light border-bottom fi">
     <div class="container">
-        <a href="#"><img style="height: 40px" src=".\img\logo\logo.png" alt="Logo" /></a>
+        <a href="#"><img style="height: 40px" src="../../img/logo/logo.png" alt="Logo" /></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -34,4 +36,3 @@ echo '
         </div>
     </div>
 </nav>
-';
