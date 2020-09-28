@@ -1,5 +1,4 @@
 <?php
-include 'navbar.php';
 echo '
 <!DOCTYPE html>
 <html lang="en">
@@ -8,18 +7,18 @@ echo '
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    // INI FRAMEWORK BOOTSRAP
+    <!--    INI FRAMEWORK BOOTSRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/png" href="img/favicon/favicon.png" />
 
 
-    //FONT INI
+    <!--   INI KHUSUS FONT     -->
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
-
-    //SCRIPT
+    <!--   SCRIPT     -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
@@ -34,39 +33,5 @@ echo '
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light border-bottom fi">
-        <div class="container">
-            <a href="#"><img style="height: 40px" src="img\logo\logo.png" alt="Logo" /></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-shopping-bag fa-lg" aria-hidden="true"></i></a>
-                    </li>
-                </ul>
-                <div style="
-							height: 30px;
-							width: 1px;
-							background-color: rgb(145, 145, 145);
-							margin: 0px 10px;
-						"></div>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Hi, Name <i class="fas fa-user-circle fa-lg"
-                                aria-hidden="true"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    '
+'
 ?>
