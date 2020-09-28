@@ -3,14 +3,13 @@ include '../../index.php'
 ?>
 
 <div class="container">
-    <div class="col-4 center">
+    <div class="d-flex justify-content-center">
         <form>
             <h1 class="text-center">Log In</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             <div class="form-group">
                 <label for="email_input">Email address</label>
-                <input type="email" class="form-control" id="email_login" aria-describedby="emailHelp"
-                    placeholder="Enter email">
+                <input type="email" class="form-control" id="email_login" aria-describedby="emailHelp" placeholder="Enter email">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                     else.</small>
             </div>
