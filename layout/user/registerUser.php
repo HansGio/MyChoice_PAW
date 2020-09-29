@@ -1,5 +1,5 @@
 <?php
-include '../../index.php'
+include '../../default.php'
 ?>
 <div class="container text-center min-vh-100">
     <img width="250px" class="pt-4" src="../../img/logo/logo.png" alt="">

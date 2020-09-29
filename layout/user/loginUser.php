@@ -1,5 +1,5 @@
 <?php
-include '../../index.php'
+include '../../default.php'
 ?>
 
 <div class="container text-center min-vh-100">

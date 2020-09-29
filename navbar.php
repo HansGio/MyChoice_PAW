@@ -1,12 +1,11 @@
 <?php
-include 'index.php'
+include 'default.php'
 ?>
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light border-bottom fi">
     <div class="container">
         <a href="#"><img style="height: 40px" src="../../img/logo/logo.png" alt="Logo" /></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -29,8 +28,7 @@ include 'index.php'
 						"></div>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Hi, Name <i class="fas fa-user-circle fa-lg"
-                            aria-hidden="true"></i></a>
+                    <a class="nav-link" href="#">Hi, Name <i class="fas fa-user-circle fa-lg" aria-hidden="true"></i></a>
                 </li>
             </ul>
         </div>
