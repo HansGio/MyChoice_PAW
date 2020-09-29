@@ -1,6 +1,7 @@
 <?php
 include '../db.php'
 ?>
+<?php echo '
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,3 +62,4 @@ include '../db.php'
             </div>
         </div>
     </nav>
+' ?>
