@@ -60,8 +60,8 @@
                         <div class="form-group">
                             <textarea class="form-control" name="address" rows="3" placeholder="Address"></textarea>
                         </div>
-                        <button type="submit" class="my-3 btn btn-dark w-100">Register</button>
-                        <small>Already have an account? <a href="#">Login Here</a></small>
+                        <button type="submit" name="register" class="my-3 btn btn-dark w-100">Register</button>
+                        <small>Already have an account? <a href="loginUser.php">Login Here</a></small>
                     </form>
                 </div>
             </div>

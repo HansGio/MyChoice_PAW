@@ -44,8 +44,8 @@
                         <div class="form-group">
                             <input type="password" id="password" placeholder="Password" class="form-control w-100" />
                         </div>
-                        <button type="submit" class="btn w-100 my-3 btn-dark">Sign in</button>
-                        <small>Don't have an account? <a href="#">Register Here</a></small>
+                        <button type="submit" name="login" class="btn w-100 my-3 btn-dark">Sign in</button>
+                        <small>Don't have an account? <a href="registerUser.php">Register Here</a></small>
                     </form>
                 </div>
             </div>
