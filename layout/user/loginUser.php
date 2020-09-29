@@ -1,23 +1,30 @@
 <?php
-include '../../navbar.php'
+include '../../index.php'
 ?>
 
+<div class="container text-center min-vh-100">
+    <img width="250px" class="pt-4" src="../../img/logo/logo.png" alt="">
+    <div class=" d-flex pt-5 justify-content-around">
 
-<div class="container-fluid h-100">
-    <div class="d-flex justify-content-center align-items-center">
-        <form>
-            <br><br><br><br><br>
-            <h1 class="text-center">Log In</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <div class="form-group">
-                <input type="email" class="form-control" id="email_login" aria-describedby="emailHelp"
-                    placeholder="Enter email">
+        <div class=" px-5">
+            <div style="width: 450px;" class="shadow card p-5 text-center">
+                <form>
+                    <h1>Sign In</h1>
+                    <p class="py-3">
+                        Lorem ipsum sjdns j dsjk jdoj idoj joijij mnsdjand en onkdnsa osdnmwjnansnk
+                        nknsal.
+                    </p>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="E-mail" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" placeholder="Password" class="form-control w-100" />
+                    </div>
+                    <button type="submit" class="btn w-100 my-3 btn-dark">Sign in</button>
+                    <small>Don't have an account? <a href="#">Register Here</a></small>
+                </form>
             </div>
-            <div class="form-group">
-                <input type="password" class="form-control" id="password_login" placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-secondary col-12">Sign In</button>
-        </form>
+        </div>
     </div>
 </div>
 
