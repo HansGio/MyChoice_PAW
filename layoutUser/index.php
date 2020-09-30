@@ -1,5 +1,5 @@
 <?php
-include '../dashboardUser.php'
+include '../dashboard/dashboardUser.php'
 ?>
 
 <br><br>
@@ -11,13 +11,13 @@ include '../dashboardUser.php'
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block" src="../../img/social-holding.jpg" alt="First slide">
+            <img class="d-block" src="../img/social-holding.jpg" alt="First slide">
         </div>
         <div class="carousel-item">
-            <img class="d-block" src="../../img/cute-pink-blur-gradation-wallpaper-preview.jpg" alt="Second slide">
+            <img class="d-block" src="../img/cute-pink-blur-gradation-wallpaper-preview.jpg" alt="Second slide">
         </div>
         <div class="carousel-item">
-            <img class="d-block" src="../../img/5aa737ee-d142-476f-b3d8-e863e2b56648-getty-688398000.jpg"
+            <img class="d-block" src="../img/5aa737ee-d142-476f-b3d8-e863e2b56648-getty-688398000.jpg"
                 alt="Third slide">
         </div>
     </div>
