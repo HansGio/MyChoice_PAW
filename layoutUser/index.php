@@ -1,5 +1,5 @@
 <?php
-include '../layout/dashboardUser.php'
+include '../dashboardUser.php'
 ?>
 
 <div class="container content">
