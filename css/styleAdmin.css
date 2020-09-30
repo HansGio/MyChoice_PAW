@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia;
+  background-color: whitesmoke;
+}
+
+.title2 {
+  float: left;
+}
+
+#app {
+  display: flex;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+#app .sidebar {
+  background-color: #c5e1f4;
+  transition: margin-left 0.5s ease-out;
+  min-width: 250px;
+}
+
+#app .sidebar-hide {
+  margin-left: -250px;
+}
+
+#app .sidebar .header {
+  background-color: #c5e1f4;
+  text-align: center;
+  padding: 32px 8px;
+}
+
+#app .sidebar .header .brand {
+  font-family: "Segoe UI";
+  color: #47525e;
+  font-weight: 500;
+  font-size: 32px;
+}
+
+#app .sidebar .header .brand span {
+  color: #47525e;
+  font-weight: 700;
+}
+
+#app .sidebar .body {
+  margin-top: 64px;
+}
+
+#app .sidebar .body a {
+  text-decoration: none;
+}
+
+#app .sidebar .body .item {
+  color: #47525e;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 18px 24px;
+  font-size: 14px;
+}
+
+#app .sidebar .body .item:hover {
+  background-color: #6fafdb;
+}
+
+.active {
+  background-color: #6fafdb;
+}
+
+.content {
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.content .header {
+  display: d-flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.content .header .hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  width: 22px;
+}
+
+.content .header .hamburger div {
+  border: 1px solid #a5b1c2;
+  margin-top: 6px;
+}
+
+/* .content .header .logout {
+  font-family: Arial;
+  color: #95afc0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+} */
+.content .header .title h2 {
+  float: left;
+  margin-top: -2%;
+  margin-left: 5%;
+}
+
+/* .content .header .logout i {
+  margin-left: 4px;
+} */
+
+.content .body {
+  padding: 0 20px;
+  margin-top: 40px;
+}
+
+.content .body .title {
+  color: #4b6584;
+  font-size: 22px;
+}
+
+.content .body .big-menu input {
+  margin-left: 30%;
+}
+
+.content .body .big-menu {
+  display: flex;
+  /* margin-right: 50%;
+  background-color: #4b6584; */
+  justify-content: space-around;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 576px) {
+  #app .sidebar-hide {
+    margin-left: -250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title2 {
+    display: none !important;
+  }
+
+  #app .sidebar-hide {
+    margin-left: -250px;
+  }
+
+  #app .sidebar-hide {
+    margin-left: 0px;
+  }
+
+  #app .sidebar .header div .fa {
+    display: unset !important;
+  }
+}
