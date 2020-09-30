@@ -18,8 +18,7 @@ include '../dashboard/dashboardUser.php'
                 <img style="min-width: auto;" class="d-block" src="../img/logo9_17_75651.png" alt="">
             </div>
             <div class="carousel-item">
-                <img class="d-block" src="../img/5aa737ee-d142-476f-b3d8-e863e2b56648-getty-688398000.jpg"
-                    alt="Third slide">
+                <img class="d-block" src="../img/5aa737ee-d142-476f-b3d8-e863e2b56648-getty-688398000.jpg" alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -30,13 +29,37 @@ include '../dashboard/dashboardUser.php'
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-    </div><br>
-    <div class="row">
+    </div>
+    <div class="row mb-3 mt-4">
         <div class="col">
             <div style="background-color: #95a9e4;" class="h3 py-3 px-4 text-white">Man</div>
         </div>
         <div class="col">
             <div style="background-color: #e49595;" class="h3 py-3 px-4 text-white text-right">Woman</div>
+        </div>
+    </div>
+    <div style="height: 400px; overflow: hidden;" class="row my-4">
+        <div class="col-3">
+            <img width="100%" height="100%" src="../img/vIWkY3LiPq.jpg" alt="" style="object-fit: cover;">
+        </div>
+        <div class="col-3">
+            <img width="100%" height="100%" src="../img/09.-Denim-Fashion-Pria.jpg" alt="" style="object-fit: cover;">
+        </div>
+        <div class=" col-3">
+            <img width="100%" height="100%" src="../img/09.-Denim-Fashion-Pria.jpg" alt="" style="object-fit: cover;">
+        </div>
+        <div class="col-3">
+            <img width="100%" height="100%" src="../img/09.-Denim-Fashion-Pria.jpg" alt="" style="object-fit: cover;">
+        </div>
+    </div>
+    <div class="row my-4">
+        <div class="col-12">
+            <div style="background-color: #e4bb95;" class="h3 py-3 px-4 text-white">Weekly Recomendation</div>
+        </div>
+    </div>
+    <div class="row my-4">
+        <div class="col-12">
+            <img class="w-100" src="../img/social-holding.jpg" alt="First slide">
         </div>
     </div>
 </div>
