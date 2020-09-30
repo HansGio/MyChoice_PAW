@@ -23,6 +23,11 @@
 	min-width: 100vw;
 }
 
+p.contactus {
+	text-align: justify;
+	margin: auto;
+}
+
 @media (min-width: 1200px) {
 	.container {
 		max-width: 1300px;
