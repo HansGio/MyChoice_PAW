@@ -8,7 +8,15 @@ include '../db.php'
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <!-- STYLE CSS -->
     <link rel="stylesheet" href="../css/styleAdmin.css">
+
+
+
+    <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Admin Corner</title>
@@ -20,21 +28,21 @@ include '../db.php'
             <div class="header">
                 <img src="../img/logo/logo.png" alt="" style="height: 100px; width: 200px;">
             </div>
-            <div class="body">
+            <div class="body" onclick="checkHamburgerMenu()">
                 <a href="dashboard.html">
-                    <div class="item active">Daftar Produk</div>
+                    <div class="item " id="daftar-menu">Daftar Produk</div>
                 </a>
                 <a href="employee.html">
-                    <div class="item">Tambah Produk</div>
+                    <div class="item" id="tambah-menu">Tambah Produk</div>
                 </a>
                 <a href="employee.html">
-                    <div class="item">Daftar Pesanan</div>
+                    <div class="item" id="daftar-pesanan">Daftar Pesanan</div>
                 </a>
                 <a href="employee.html">
-                    <div class="item">Laporan</div>
+                    <div class="item" id="laporan">Laporan</div>
                 </a>
                 <a href="employee.html">
-                    <div class="item">Keluar</div>
+                    <div class="item" id="keluar">Keluar</div>
                 </a>
             </div>
         </div>
