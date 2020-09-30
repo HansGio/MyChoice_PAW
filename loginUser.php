@@ -27,7 +27,7 @@
 
 <body>
     <div class="container text-center min-vh-100">
-        <img width="250px" class="pt-4" src="img/logo/logo.png" alt="">
+        <img class="logo-img pt-4" src="img/logo/logo.png" alt="">
         <div class=" d-flex pt-5 justify-content-around">
 
             <div class=" px-5">
