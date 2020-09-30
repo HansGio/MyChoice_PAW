@@ -23,9 +23,9 @@
 	min-width: 100vw;
 }
 
-p.contactus {
+p.about {
 	text-align: justify;
-	margin: auto;
+	margin: 15px 0;
 }
 
 @media (min-width: 1200px) {
