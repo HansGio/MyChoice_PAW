@@ -3,6 +3,10 @@
 	padding-bottom: 8rem;
 }
 
+.logo-img {
+	width: 250px;
+}
+
 .navbar-nav .nav-link {
 	padding: 0 0.8rem !important;
 }
