@@ -13,11 +13,20 @@ include '../../db.php'
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
 
+
+    <!-- style  -->
     <link type="text/css" rel="stylesheet" href="../css/style.css" />
     <link rel="icon" type="image/png" href="../img/favicon/favicon.png" />
 
+
+
+
     <!--   INI KHUSUS FONT     -->
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+
+
+
 
     <!--   SCRIPT     -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -36,7 +45,7 @@ include '../../db.php'
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light border-bottom fi">
         <div class="container">
-            <a href="#"><img style="height: 40px" src="../../img/logo/logo.png" alt="Logo" /></a>
+            <a href="#"><img style="height: 40px" src="../img/logo/logo.png" alt="Logo" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
