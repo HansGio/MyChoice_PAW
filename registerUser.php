@@ -32,11 +32,14 @@
 
             <div class=" px-5">
                 <div style="width: 450px;" class="shadow card p-5 mb-5 text-center">
-                    <form action="">
+                    <form action="./process/registerUserProcess.php" method="post">
                         <h1 class="text-center">Sign Up</h1>
                         <p class="py-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <div class="form-group">
                             <input type="text" class="form-control" name="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="username" placeholder="Username">
                         </div>
                         <div class="form-group">
                             <input type="email" class="form-control" name="email" placeholder="Email">
@@ -53,9 +56,6 @@
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-control" name="password" placeholder="Password">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password">
                         </div>
                         <div class="form-group">
                             <textarea class="form-control" name="address" rows="3" placeholder="Address"></textarea>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../db.php'
 ?>
 
@@ -56,9 +57,22 @@ include '../db.php'
 							margin: 0px 10px;
 						"></div>
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Hi, Name <i class="fas fa-user-circle fa-lg" aria-hidden="true"></i></a>
-                    </li>
+                    <?php
+                    if ($_SESSION['isLogin']) {
+                        echo '
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Hi, ' . $_SESSION['user']['name'] . '<i class="fas fa-user-circle fa-lg" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../process/logoutUserProcess.php"><i class="fas fa-sign-out-alt fa-lg" aria-hidden="true"></i></a>
+                        </li>';
+                    } else {
+                        echo '
+                        <li class="nav-item">
+                            <a class="nav-link" href="../loginUser.php"><i class="fas fa-sign-in-alt fa-lg" aria-hidden="true"></i></a>
+                        </li>';
+                    }
+                    ?>
                 </ul>
             </div>
         </div>

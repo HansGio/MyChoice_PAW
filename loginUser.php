@@ -32,17 +32,17 @@
 
             <div class=" px-5">
                 <div style="width: 450px;" class="shadow card p-5 text-center">
-                    <form action="">
+                    <form action="process/loginUserProcess.php" method="POST">
                         <h1>Sign In</h1>
                         <p class="py-3">
                             Lorem ipsum sjdns j dsjk jdoj idoj joijij mnsdjand en onkdnsa osdnmwjnansnk
                             nknsal.
                         </p>
                         <div class="form-group">
-                            <input type="email" id="email" placeholder="E-mail" class="form-control" />
+                            <input type="text" name="username" placeholder="Username" class="form-control" />
                         </div>
                         <div class="form-group">
-                            <input type="password" id="password" placeholder="Password" class="form-control w-100" />
+                            <input type="password" name="password" placeholder="Password" class="form-control w-100" />
                         </div>
                         <button type="submit" name="login" class="btn w-100 my-3 btn-dark">Sign in</button>
                         <small>Don't have an account? <a href="registerUser.php">Register Here</a></small>
