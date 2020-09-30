@@ -18,3 +18,5 @@ include '../dashboard/dashboardUser.php'
       <p class="about"> Thank you for shopping and trusting us </p>
     </div>
   </div>
+
+</html>

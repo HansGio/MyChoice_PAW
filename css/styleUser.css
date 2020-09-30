@@ -3,6 +3,10 @@
 	padding-bottom: 8rem;
 }
 
+.logo-img {
+	width: 250px;
+}
+
 .navbar-nav .nav-link {
 	padding: 0 0.8rem !important;
 }
@@ -26,6 +30,10 @@
 p.about {
 	text-align: justify;
 	margin: 15px 0;
+}
+
+.center{
+	
 }
 
 @media (min-width: 1200px) {
