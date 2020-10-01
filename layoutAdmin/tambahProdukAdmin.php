@@ -1,7 +1,4 @@
 <?php
-<<<<<<< HEAD
-include '../dashboard/dashboardAdmin.php';
-=======
 include '../dashboard/dashboardAdmin.php'
 ?>
 
@@ -39,4 +36,3 @@ include '../dashboard/dashboardAdmin.php'
 </div>
 </div>
 </div>
->>>>>>> a279c34c4795636f69999008f8ecdc369da73d8c
