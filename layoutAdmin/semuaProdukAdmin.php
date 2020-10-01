@@ -15,9 +15,9 @@ include '../dashboard/dashboardAdmin.php'
 </div>
 <div class="body">
     <div class="big-menu">
-        <h4 class="active-big-menu"> Semua Produk</h4>
-        <h4>Akrif</h4>
-        <h4>NonAktif</h4>
+        <h4 class="active-big-menu"><a href="semuaProdukAdmin.php">Semua Produk</a></h4>
+        <h4><a href="produkAktifAdmin.php">Aktif</a></h4>
+        <h4><a href="produkNonAktifAdmin.php">NonAktif</a></h4>
         <div class="search-box">
             <input type="text" name="searchAllItemFromAdmin" id="search" placeholder="Search Items">
             <a href="" class="search-btn"><i class="fas fa-search"></i></a>

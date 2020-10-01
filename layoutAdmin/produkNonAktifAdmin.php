@@ -16,8 +16,8 @@ include '../dashboard/dashboardAdmin.php'
 <div class="body">
     <div class="big-menu">
         <h4 class="active-big-menu"> Semua Produk</h4>
-        <h4>Akrif</h4>
-        <h4>NonAktif</h4>
+        <h4><a href="produkAktifAdmin.php">Aktif</a></h4>
+        <h4><a href="produkNonAktifAdmin.php">NonAktif</a></h4>
         <input type="text" name="searchAllItemFromAdmin" id="search" placeholder="Search">
 
         <!-- <div class="input-group mb-3">
@@ -48,10 +48,10 @@ include '../dashboard/dashboardAdmin.php'
                 echo '<tr?><td colspan="7"> Tidak ada data </td>
             </tr>';
             } else {
-            $no = 1;
-            while ($all_item = mysqli_fetch_assoc($all_items)) {
-            echo
-            '<tr>
+                $no = 1;
+                while ($all_item = mysqli_fetch_assoc($all_items)) {
+                    echo
+                        '<tr>
                 <td>' . $no . '</td>
                 <td>' . $all_item['informasi_produk'] . '</td>
                 <td>' . $all_item['harga'] . '</td>
@@ -63,8 +63,8 @@ include '../dashboard/dashboardAdmin.php'
                         onClick="return confirm ( \'Yakin?\')"><i class="fa fa-trash"></i></a>
                 </td>
             </tr>';
-            $no++;
-            }
+                    $no++;
+                }
             }
             ?>
         </tbody>

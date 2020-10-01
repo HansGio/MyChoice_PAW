@@ -29,7 +29,8 @@ include '../db.php'
 
 
     <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Admin Corner</title>
 </head>
 
@@ -40,19 +41,19 @@ include '../db.php'
                 <img src="../img/logo/logo.png" alt="" style="width: 200px;">
             </div>
             <div class="body">
-                <a href="dashboard.html">
+                <a href="../layoutAdmin/semuaProdukAdmin.php">
                     <div class="item " id="daftar-menu">Daftar Produk</div>
                 </a>
                 <a href="../layoutAdmin/tambahProdukAdmin.php">
                     <div class="item" id="tambah-menu">Tambah Produk</div>
                 </a>
-                <a href="#">
+                <a href="../layoutAdmin/orderListAdmin.php">
                     <div class="item" id="daftar-pesanan">Daftar Pesanan</div>
                 </a>
-                <a href="#">
+                <a href="../layoutAdmin/reportAdmin.php">
                     <div class="item" id="laporan">Laporan</div>
                 </a>
-                <a href="#">
+                <a href="../loginAdmin.php">
                     <div class="item" id="keluar">Keluar</div>
                 </a>
             </div>
