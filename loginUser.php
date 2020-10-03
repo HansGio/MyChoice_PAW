@@ -1,58 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+include 'process/loginUserProcess.php';
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+if (!isset($_SESSION['isLogin'])) {
+?>
+    <!DOCTYPE html>
+    <html lang="en">
 
-    <!--    INI FRAMEWORK BOOTSRAP-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link type="text/css" rel="stylesheet" href="css/styleUser.css" />
-    <link rel="icon" type="image/png" href="img/favicon/favicon.png" />
+        <!--   FRAMEWORK BOOTSRAP  -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <!--   INI KHUSUS FONT     -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/styleUser.css" />
+        <link rel="icon" type="image/png" href="img/favicon/favicon.png" />
 
-    <!--   SCRIPT     -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-    </script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <title>MyChoice</title>
-</head>
+        <!--   SCRIPT     -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <title>MyChoice</title>
+    </head>
 
-<body>
-    <div class="container text-center min-vh-100">
-        <img class="logo-img pt-4" src="img/logo/logo.png" alt="">
-        <div class=" d-flex pt-5 justify-content-around">
+    <body>
+        <div class="container text-center min-vh-100">
+            <img class="logo-img pt-4" src="img/logo/logo.png" alt="">
+            <div class=" d-flex pt-5 justify-content-around">
 
-            <div class=" px-5">
-                <div style="width: 450px;" class="shadow card p-5 text-center">
-                    <form action="process/loginUserProcess.php" method="POST">
+                <div class=" px-5">
+                    <div style="width: 450px;" class="shadow card p-5 text-center">
                         <h1>Sign In</h1>
                         <p class="py-3">
                             Lorem ipsum sjdns j dsjk jdoj idoj joijij mnsdjand en onkdnsa osdnmwjnansnk
                             nknsal.
                         </p>
-                        <div class="form-group">
-                            <input type="text" name="username" placeholder="Username" class="form-control" />
-                        </div>
-                        <div class="form-group">
-                            <input type="password" name="password" placeholder="Password" class="form-control w-100" />
-                        </div>
-                        <button type="submit" name="login" class="btn w-100 my-3 btn-dark">Sign in</button>
+                        <form class="text-left" method="POST">
+                            <div class="form-group">
+                                <input type="text" name="username" id="username" placeholder="Username" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" id="password" placeholder="Password" class="form-control" />
+                            </div>
+                            <?php
+                            if (isset($output)) {
+                                echo '<div class="alert alert-danger" role="alert">' . $output . '</div>';
+                            }
+                            ?>
+                            <button type="submit" name="login" class="btn w-100 my-3 btn-dark">Sign in</button>
+                        </form>
                         <small>Don't have an account? <a href="registerUser.php">Register Here</a></small>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
+    </body>
 
-</body>
-
-</html>
+    </html>
+<?php
+} else {
+    header('location: layoutUser');
+}
+?>

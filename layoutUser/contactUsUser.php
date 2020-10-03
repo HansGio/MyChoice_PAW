@@ -3,49 +3,38 @@ include '../dashboard/dashboardUser.php'
 ?>
 
 <div class="container content">
-<div class="containercolumnis-10">
-    <div class="section">
-        <h1 class="title">Contact Us</h1>
-        <h5> Monday - Saturday (08.30 - 17.30) </h5>
-        <form action="" method="post">
-            <div class="form-group col-xs4">
-                <label class="label">Name</label>
-                <div class="control col-xs-4">
+    <div class="d-flex justify-content-center text-center">
+        <div class="col-7">
+            <h1>Contact Us</h1>
+            <p> Monday - Saturday (08.30 - 17.30) </p>
+            <form action="" method="post">
+                <div class="form-group col-xs4">
+                    <label class="label text-left w-100">Name</label>
                     <input name="name" class="form-control" type="text" placeholder="Name">
-                    </div>
                 </div>
-                
+
                 <div class="form-group">
-                    <label class="label">Email</label>
-                        <div class="control">
-                            <input name="email" class="form-control" type="email" placeholder="Email">
-                            </div>
-                        </div>
-                                           
-                        <div class="form-group">
-                            <label class="label">Phone Number</label>
-                            <div class="control">
-                                <input name="phone" class="form-control" type="number" placeholder="Phone Number">   
-                            </div>
-                        </div>
-                    
-                        <div class="form-group">
-                            <label class="label">Message</label>
-                            <div class="control">
-                                <input name="message" class="form-control" type="text" placeholder="Type your message here">
-                            </div>
-                        </div>
-                        
-                        <div class="field is-grouped">
-                            <div class="control">
-                                <button name="" Type="button" class="btn btn-primary">Submit</button>
-                            </div>
-                        
-                        </div>
-                    </form>
+                    <label class="label text-left w-100">Email</label>
+                    <input name="email" class="form-control" type="email" placeholder="Email">
                 </div>
-            </div>
-        </section>
+
+                <div class="form-group">
+                    <label class="label text-left w-100">Phone Number</label>
+                    <input name="phone" class="form-control" type="number" placeholder="Phone Number">
+                </div>
+
+                <div class="form-group">
+                    <label class="label text-left w-100">Message</label>
+                    <textarea name="message" class="form-control" type="text" rows="5" placeholder="Type your message here"></textarea>
+                </div>
+
+                <div class="field is-grouped">
+                    <button name="" Type="button" class="btn btn-primary w-100 mt-3">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </section>
 </div>
 </form>
 

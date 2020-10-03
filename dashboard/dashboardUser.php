@@ -58,7 +58,7 @@ include '../db.php'
 						"></div>
                 <ul class="navbar-nav">
                     <?php
-                    if ($_SESSION['isLogin']) {
+                    if (isset($_SESSION['isLogin'])) {
                         echo '
                         <li class="nav-item">
                         <a class="nav-link" href="#">Hi, ' . $_SESSION['user']['name'] . '<i class="fas fa-user-circle fa-lg" aria-hidden="true"></i></a>
