@@ -32,10 +32,6 @@ p.about {
 	margin: 15px 0;
 }
 
-.center{
-	
-}
-
 @media (min-width: 1200px) {
 	.container {
 		max-width: 1300px;
