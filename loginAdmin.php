@@ -36,20 +36,18 @@
 
             <div class=" px-5">
                 <div style="width: 450px;" class="shadow card p-5 text-center">
-                    <form>
+                    <form action = "./process/loginAdminProcess.php" method ="POST">
                         <h1>Masuk</h1>
                         <p class="py-3">
-                            Lorem ipsum sjdns j dsjk jdoj idoj joijij mnsdjand en onkdnsa osdnmwjnansnk
-                            nknsal.
+                            Hi welcome
                         </p>
                         <div class="form-group">
-                            <input type="email" id="email" placeholder="E-mail" class="form-control" />
+                            <input type="text" id="username" placeholder="Username" class="form-control" />
                         </div>
                         <div class="form-group">
                             <input type="password" id="password" placeholder="Password" class="form-control w-100" />
                         </div>
-                        <button type="submit" name="login" class="btn w-100 my-3 btn-dark">Sign in</button>
-                        <small><a href="registerUser.php">Lupa Password?</a></small>
+                        <button type="submit" name="loginAdmin" class="btn w-100 my-3 btn-dark">Sign in</button>
                     </form>
                 </div>
             </div>
