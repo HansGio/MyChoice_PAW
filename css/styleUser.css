@@ -32,12 +32,30 @@ p.about {
 	margin: 15px 0;
 }
 
-.center{
-	
+.center {
 }
 
 @media (min-width: 1200px) {
 	.container {
 		max-width: 1300px;
+	}
+}
+
+.alert {
+	position: relative;
+	animation-name: alert;
+	animation-duration: 0.5s;
+	animation-iteration-count: 2;
+}
+
+@keyframes alert {
+	0% {
+		top: 0px;
+	}
+	50% {
+		top: -7px;
+	}
+	100% {
+		top: 0px;
 	}
 }
