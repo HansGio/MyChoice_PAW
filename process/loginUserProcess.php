@@ -1,37 +1,29 @@
 <?php
+include 'db.php';
+session_start();
+$output = NULL;
+
 if (isset($_POST['login'])) {
-    include('../db.php');
-
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $query = mysqli_query($con, "SELECT * FROM users WHERE username = '$username' Limit 11") or die(mysqli_error($con));
-
-    if (mysqli_num_rows($query) == 0) {
-        echo
-            '<script>
-                alert("Username not found"); window.location = "../loginUser.php"
-            </script>';
+    if (empty($_POST['username']) || empty($_POST['password'])) {
+        $output = "Username or password can't be empty";
     } else {
-        $user = mysqli_fetch_assoc($query);
-        if (password_verify($password, $user['password'])) {
-            session_start();
-            $_SESSION['isLogin'] = true;
-            $_SESSION['user'] = $user;
+        $username = mysqli_real_escape_string($con, $_POST['username']);
+        $password = mysqli_real_escape_string($con, $_POST['password']);
+        $query = mysqli_query($con, "SELECT * FROM users WHERE username = '$username' LIMIT 1") or die(mysqli_error($con));
 
-            echo
-                '<script>
-                    alert("Login Success"); window.location = "../layoutUser/"
-                </script>';
+        if (mysqli_num_rows($query) == 0) {
+            $output = "Username not found";
         } else {
-            echo
-                '<script>
-                    alert("Username or Password Invalid"); window.location = "../loginUser.php"
-                </script>';
+            $user = mysqli_fetch_assoc($query);
+
+            if ($user['validated'] == 0) {
+                $output = "Validate your email first.";
+            } else if (password_verify($password, $user['password'])) {
+                $_SESSION['loggedin'] = true;
+                $_SESSION['user'] = $user;
+            } else {
+                $output = "Invalid username or password";
+            }
         }
     }
-} else {
-    echo
-        '<script>
-            window.history.back()"
-        </script>';
 }
