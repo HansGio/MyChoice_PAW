@@ -1,7 +1,7 @@
 <?php
 include 'process/loginUserProcess.php';
 
-if (!isset($_SESSION['loggedin'])) {
+if (!isset($_SESSION['isLogin'])) {
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -60,6 +60,6 @@ if (!isset($_SESSION['loggedin'])) {
     </html>
 <?php
 } else {
-    header('location: home.php');
+    header('location: layoutUser');
 }
 ?>
