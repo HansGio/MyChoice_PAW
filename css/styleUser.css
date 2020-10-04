@@ -32,10 +32,13 @@ p.about {
 	margin: 15px 0;
 }
 
-<<<<<<< HEAD
-=======
+.container .head .back button {
+	float: left;
+	border: none;
+	font-size: 40px;
+}
 
->>>>>>> 051a16013cc524e14fceb04e42950712443e376e
+
 @media (min-width: 1200px) {
 	.container {
 		max-width: 1300px;
