@@ -32,6 +32,8 @@ p.about {
 	margin: 15px 0;
 }
 
+
+
 .container .head .back button {
 	float: left;
 	border: none;
@@ -46,6 +48,12 @@ p.about {
 	justify-content: space-around;
 	/* margin: 20px; */
 }
+
+.container .body a{
+	color: black;
+}
+
+
 
 
 @media (min-width: 1200px) {
