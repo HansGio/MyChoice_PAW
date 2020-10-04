@@ -7,7 +7,7 @@ if (isset($_SESSION['isLogin'])) {
         <hr>
         <div class="row">
             <div class="text-center col-sm-4 overflow-hidden py-4">
-                <img src="../img/profile/profile<?= $_SESSION['user']['img_status'] == 0 ? "default" : $_SESSION['user']['id'] ?>.jpg" alt="Profile Picture" class="rounded-circle mx-auto mt-1 profile-large">
+                <img src="../img/profile/profile<?= $_SESSION['user']['img_status'] == 0 ? "default" : $_SESSION['user']['id'] ?>.jpg?<?= mt_rand() ?>" alt="Profile Picture" class="rounded-circle mx-auto mt-1 profile-large">
             </div>
             <div class="col-sm-8">
                 <div class="row">

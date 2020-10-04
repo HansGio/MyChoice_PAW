@@ -62,7 +62,7 @@ include_once '../db.php';
                     ?>
                         <li class="nav-item">
                             <a class="nav-link" href="profileUser.php">Hi, <?= $_SESSION['user']['name'] ?>
-                                <img src="../img/profile/profile<?= $_SESSION['user']['img_status'] == 0 ? "default" : $_SESSION['user']['id'] ?>.jpg" alt="Profile Picture" class="rounded-circle mx-auto mt-1 profile-small">
+                                <img src="../img/profile/profile<?= $_SESSION['user']['img_status'] == 0 ? "default" : $_SESSION['user']['id'] ?>.jpg?<?= mt_rand() ?>" alt="Profile Picture" class="rounded-circle mx-auto mt-1 profile-small">
                             </a>
                         </li>
                         <li class="nav-item">
