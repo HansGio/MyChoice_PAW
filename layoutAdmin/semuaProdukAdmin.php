@@ -15,10 +15,10 @@ include '../dashboard/dashboardAdmin.php'
 </div>
 <div class="body">
     <div class="big-menu">
-        <h4 class="active-big-menu"><a href="semuaProdukAdmin.php">Semua Produk</a></h4>
+        <h4><a href="semuaProdukAdmin.php" style="border-bottom: 5px solid #4b6584;">Semua Produk</a></h4>
         <h4><a href="produkAktifAdmin.php">Aktif</a></h4>
         <h4><a href="produkNonAktifAdmin.php">NonAktif</a></h4>
-        <div class="search-box">
+        <div class="search-box col-sm-2">
             <input type="text" name="searchAllItemFromAdmin" id="search" placeholder="Search Items">
             <a href="" class="search-btn"><i class="fas fa-search"></i></a>
         </div>
@@ -36,6 +36,7 @@ include '../dashboard/dashboardAdmin.php'
     <table class="table table-hover">
         <thead>
             <tr>
+                <th>No</th>
                 <th>Informasi Produk</th>
                 <th>Harga $</th>
                 <th>Stock #</th>
@@ -56,20 +57,31 @@ include '../dashboard/dashboardAdmin.php'
             echo
             '<tr>
                 <td>' . $no . '</td>
-                <td>' . $all_item['informasi_produk'] . '</td>
+                <td>
+                    <div class="d-flex">
+                        <img src="../img/' . $all_item['gambar'] . '.jpg" alt="" style="width: 100px;">
+                        <div class="offset-1">
+                            ' . $all_item['nama_produk'] . '
+                            <br>
+                            Size S/M/L/XL
+                        </div>
+                    </div>
+                </td>
                 <td>' . $all_item['harga'] . '</td>
-                <td>' . $all_item['stock'] . '</td>
+                <td>' . $all_item['stock_produk'] . '</td>
                 <td>' . $all_item['status'] . '</td>
                 <td>
-                    <a href="./editItemAdmin.php?id=' . $all_item['id'] . '"><i class="fa fa-trash"></i></a>
-                    <a href="../deleteitemAdmin.php?id=' . $all_item['id'] . '"
-                        onClick="return confirm ( \'Yakin?\')"><i class="fa fa-trash"></i></a>
+                    <a href="./editItemAdmin.php?id=' . $all_item['id'] . '" style="font-size: 40px;"><i
+                            class="fas fa-edit"></i></a>
+                    <a href="../deleteitemAdmin.php?id=' . $all_item['id'] . '" onClick="return confirm ( \'Yakin?\')"
+                        style="font-size: 40px;"><i class="fa fa-trash"></i></a>
                 </td>
             </tr>';
             $no++;
             }
             }
             ?>
+            <h1></h1>
         </tbody>
     </table>
 </div>
