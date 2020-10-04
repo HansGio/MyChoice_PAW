@@ -34,6 +34,7 @@ include '../dashboard/dashboardAdmin.php'
     <table class="table table-hover">
         <thead>
             <tr>
+                <th>No</th>
                 <th>Informasi Produk</th>
                 <th>Harga $</th>
                 <th>Stock #</th>
