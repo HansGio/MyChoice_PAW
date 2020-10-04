@@ -32,6 +32,25 @@ p.about {
 	margin: 15px 0;
 }
 
+.container .head .back button {
+	float: left;
+	border: none;
+	font-size: 40px;
+}
+
+.container .body .items img {
+	width: 260px;
+	/* flex-wrap: wrap; */
+}
+.container .body {
+	justify-content: space-around;
+	/* margin: 20px; */
+}
+
+.container .body a {
+	color: black;
+}
+
 @media (min-width: 1200px) {
 	.container {
 		max-width: 1300px;

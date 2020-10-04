@@ -7,7 +7,7 @@ include '../dashboard/dashboardUser.php'
 <div class="container">
     <div class="head">
         <div class="back">
-            <button style="float: left; border: none; font-size: 40px;"><i class="fas fa-reply"></i></button>
+            <button><i class="fas fa-reply"></i></button>
         </div>
         <div class="tittle text-center align-items-center col-sm-2 offset-sm-5" style="height: 50px;">
             <h2>Details</h2>
@@ -30,10 +30,10 @@ include '../dashboard/dashboardUser.php'
 
                 <form action="">
                     <div class="d-flex">
-                        <input type="radio" name="gender">S<br>
-                        <input type="radio" name="gender">M<br>
-                        <input type="radio" name="gender">L<br>
-                        <input type="radio" name="gender">XL<br>
+                        <input type="radio" name="gender"> S<br>
+                        <input type="radio" name="gender"> M<br>
+                        <input type="radio" name="gender"> L<br>
+                        <input type="radio" name="gender"> XL<br>
                     </div>
                 </form>
 

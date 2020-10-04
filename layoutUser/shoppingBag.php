@@ -7,7 +7,7 @@ include '../dashboard/dashboardUser.php'
 <div class="container">
     <div class="head">
         <div class="back">
-            <button style="float: left; border: none; font-size: 40px;"><i class="fas fa-reply"></i></button>
+            <button><i class="fas fa-reply"></i></button>
         </div>
         <div class="tittle text-center align-items-center col-sm-2 offset-sm-5" style="height: 50px;">
             <h2>Shopping Bag</h2>
@@ -29,12 +29,14 @@ include '../dashboard/dashboardUser.php'
                 <button type="button" class="btn btn-secondary">+</button>
             </div>
             <br>
-            <div class="d-flex flex-row-reverse bd-highlight">
-                <div class="p-2 bd-highlight" style="color: red;"><i class="far fa-trash-alt"> Delete</i></div>
+            <div class="d-flex flex-row-reverse ">
+
+                <!-- untuk ini tambahkan proses delete checkout -->
+                <div class="p-2 "><a href=".." style="color: red;"><i class="far fa-trash-alt"> Delete</i></a></div>
             </div>
 
-            <div class="d-flex bd-highlight mb-3 ">
-                <div class="mr-auto p-2 bd-highlight">
+            <div class="d-flex  mb-3 ">
+                <div class="mr-auto p-2 ">
                     <h5 style="float: right;"></h5>
                 </div>
             </div>
