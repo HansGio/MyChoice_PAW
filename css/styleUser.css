@@ -38,6 +38,15 @@ p.about {
 	font-size: 40px;
 }
 
+.container .body .items img{
+	width: 260px;
+	/* flex-wrap: wrap; */
+}
+.container .body {
+	justify-content: space-around;
+	/* margin: 20px; */
+}
+
 
 @media (min-width: 1200px) {
 	.container {
