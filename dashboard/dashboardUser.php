@@ -34,7 +34,7 @@ include '../db.php'
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light border-bottom fi">
         <div class="container">
-            <a href="#"><img style="height: 40px" src="../img/logo/logo.png" alt="Logo" /></a>
+            <a href="../layoutUser"><img style="height: 40px" src="../img/logo/logo.png" alt="Logo" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -59,18 +59,20 @@ include '../db.php'
                 <ul class="navbar-nav">
                     <?php
                     if (isset($_SESSION['isLogin'])) {
-                        echo '
+                    ?>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Hi, ' . $_SESSION['user']['name'] . '<i class="fas fa-user-circle fa-lg" aria-hidden="true"></i></a>
+                            <a class="nav-link" href="profileUser.php">Hi, <?= $_SESSION['user']['name'] ?><i class="fas fa-user-circle fa-lg" aria-hidden="true"></i></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../process/logoutUserProcess.php"><i class="fas fa-sign-out-alt fa-lg" aria-hidden="true"></i></a>
-                        </li>';
+                        </li>
+                    <?php
                     } else {
-                        echo '
+                    ?>
                         <li class="nav-item">
                             <a class="nav-link" href="../loginUser.php"><i class="fas fa-sign-in-alt fa-lg" aria-hidden="true"></i></a>
-                        </li>';
+                        </li>
+                    <?php
                     }
                     ?>
                 </ul>

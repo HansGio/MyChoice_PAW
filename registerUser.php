@@ -20,6 +20,7 @@ if (!isset($_SESSION['isLogin'])) {
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
         <title>MyChoice</title>
     </head>
 
@@ -34,29 +35,34 @@ if (!isset($_SESSION['isLogin'])) {
                         <p class="py-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <form class="text-left" method="POST">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="name" placeholder="Name">
+                                <input type="text" class="form-control" name="name" placeholder="Name" value="<?= isset($_POST['name']) ? $_POST['name'] : "" ?>">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="username" placeholder="Username">
+                                <input type="text" class="form-control" name="username" placeholder="Username" value="<?= isset($_POST['username']) ? $_POST['username'] : "" ?>">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" name="email" placeholder="Email">
+                                <input type="email" class="form-control" name="email" placeholder="Email" value="<?= isset($_POST['email']) ? $_POST['email'] : "" ?>">
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control" name="password" placeholder="Password">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="birth_date" onfocus="(this.type='date')" placeholder="Birthdate">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text""><i class=" fas fa-birthday-cake"></i></span>
+                                    </div>
+                                    <input type="date" class="form-control" name="birth_date" placeholder="Birthdate" value="<?= isset($_POST['birth_date']) ? $_POST['birth_date'] : "" ?>">
+                                </div>
                             </div>
                             <div class="form-group">
                                 <select class="form-control" name="gender">
-                                    <option value="" selected disabled>Select Gender</option>
-                                    <option value="man">Man</option>
-                                    <option value="woman">Woman</option>
+                                    <option value="" <?= !isset($_POST['gender']) ? "selected" : "" ?> disabled>Select Gender</option>
+                                    <option value="Man" <?= isset($_POST['gender']) && $_POST['gender'] == "Man" ? "selected" : "" ?>>Man</option>
+                                    <option value="Woman" <?= isset($_POST['gender']) && $_POST['gender'] == "Woman" ? "selected" : "" ?>>Woman</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" name="address" rows="3" placeholder="Address"></textarea>
+                                <textarea class="form-control" name="address" rows="3" placeholder="Address"><?= isset($_POST['address']) ? $_POST['address'] : "" ?></textarea>
                             </div>
                             <?php
                             if (isset($output)) {

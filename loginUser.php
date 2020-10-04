@@ -37,10 +37,10 @@ if (!isset($_SESSION['isLogin'])) {
                         </p>
                         <form class="text-left" method="POST">
                             <div class="form-group">
-                                <input type="text" name="username" id="username" placeholder="Username" class="form-control" />
+                                <input type="text" name="username" placeholder="Username" class="form-control" value="<?= isset($_POST['username']) ? $_POST['username'] : "" ?>" />
                             </div>
                             <div class="form-group">
-                                <input type="password" name="password" id="password" placeholder="Password" class="form-control" />
+                                <input type="password" name="password" placeholder="Password" class="form-control" />
                             </div>
                             <?php
                             if (isset($output)) {
