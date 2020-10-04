@@ -1,7 +1,7 @@
 <?php
 include 'process/registerUserProcess.php';
 
-if (!isset($_SESSION['isLogin'])) {
+if (!isset($_SESSION['isLoginUser'])) {
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -34,6 +34,11 @@ if (!isset($_SESSION['isLogin'])) {
                         <h1 class="text-center">Sign Up</h1>
                         <p class="py-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <form class="text-left" method="POST">
+                            <?php
+                            if (isset($output)) {
+                                echo '<div class="alert alert-danger" role="alert">' . $output . '</div>';
+                            }
+                            ?>
                             <div class="form-group">
                                 <input type="text" class="form-control" name="name" placeholder="Name" value="<?= isset($_POST['name']) ? $_POST['name'] : "" ?>">
                             </div>
@@ -64,11 +69,6 @@ if (!isset($_SESSION['isLogin'])) {
                             <div class="form-group">
                                 <textarea class="form-control" name="address" rows="3" placeholder="Address"><?= isset($_POST['address']) ? $_POST['address'] : "" ?></textarea>
                             </div>
-                            <?php
-                            if (isset($output)) {
-                                echo '<div class="alert alert-danger" role="alert">' . $output . '</div>';
-                            }
-                            ?>
                             <button type="submit" name="register" class="my-3 btn btn-dark w-100">Register</button>
                         </form>
                         <small>Already have an account? <a href="loginUser.php">Login Here</a></small>

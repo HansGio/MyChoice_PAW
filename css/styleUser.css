@@ -32,20 +32,15 @@ p.about {
 	margin: 15px 0;
 }
 
-.container .head .back button {
+.back {
 	float: left;
 	border: none;
-	font-size: 40px;
 }
 
-.container .body .items img {
-	width: 260px;
-	/* flex-wrap: wrap; */
-}
-.container .body {
-	justify-content: space-around;
-	/* margin: 20px; */
-}
+/* .container .body .items img {
+	width: 260px; */
+/* flex-wrap: wrap; */
+/* } */
 
 .container .body a {
 	color: black;
@@ -90,4 +85,10 @@ p.about {
 	object-fit: cover;
 	width: 25px;
 	height: 25px;
+}
+.navbar .vertical-line {
+	height: 30px;
+	width: 1px;
+	background-color: rgb(145, 145, 145);
+	margin: 0px 10px;
 }

@@ -50,15 +50,10 @@ include_once '../db.php';
                         <a class="nav-link" href="#"><i class="fas fa-shopping-bag fa-lg" aria-hidden="true"></i></a>
                     </li>
                 </ul>
-                <div style="
-							height: 30px;
-							width: 1px;
-							background-color: rgb(145, 145, 145);
-							margin: 0px 10px;
-						"></div>
+                <div class="vertical-line"></div>
                 <ul class="navbar-nav">
                     <?php
-                    if (isset($_SESSION['isLogin'])) {
+                    if (isset($_SESSION['isLoginUser'])) {
                     ?>
                         <li class="nav-item">
                             <a class="nav-link" href="profileUser.php">Hi, <?= $_SESSION['user']['name'] ?>

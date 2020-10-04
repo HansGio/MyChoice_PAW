@@ -19,7 +19,7 @@ if (isset($_POST['login'])) {
             if ($user['validated'] == 0) {
                 $output = "Validate your email first.";
             } else if (password_verify($password, $user['password'])) {
-                $_SESSION['isLogin'] = true;
+                $_SESSION['isLoginUser'] = true;
                 $_SESSION['user'] = $user;
             } else {
                 $output = "Invalid username or password";

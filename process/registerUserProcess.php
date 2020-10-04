@@ -52,8 +52,8 @@ if (isset($_POST['register'])) {
                 if ($mail->send()) {
                     echo
                         '<script>
-                        alert("Register Success, a validation email has been sent to ' . $email . '"); window.location = "loginUser.php"
-                    </script>';
+                            alert("Register Success, a validation email has been sent to ' . $email . '"); window.location = "loginUser.php"
+                        </script>';
                 }
             } else {
                 $output = 'Registration failed.';

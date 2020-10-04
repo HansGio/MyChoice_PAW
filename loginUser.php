@@ -1,7 +1,7 @@
 <?php
 include 'process/loginUserProcess.php';
 
-if (!isset($_SESSION['isLogin'])) {
+if (!isset($_SESSION['isLoginUser'])) {
 ?>
     <!DOCTYPE html>
     <html lang="en">

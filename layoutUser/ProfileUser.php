@@ -1,15 +1,15 @@
 <?php
 include '../dashboard/dashboardUser.php';
-if (isset($_SESSION['isLogin'])) {
+if (isset($_SESSION['isLoginUser'])) {
 ?>
     <div class="container content">
         <h3 class="d-inline">Profile</h3>
         <hr>
         <div class="row">
-            <div class="text-center col-sm-4 overflow-hidden py-4">
+            <div class="text-center col-sm-4 overflow-hidden p-4">
                 <img src="../img/profile/profile<?= $_SESSION['user']['img_status'] == 0 ? "default" : $_SESSION['user']['id'] ?>.jpg?<?= mt_rand() ?>" alt="Profile Picture" class="rounded-circle mx-auto mt-1 profile-large">
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-8 p-4">
                 <div class="row">
                     <div class="col">
                         <h5>Personal Info</h5>
