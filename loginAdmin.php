@@ -36,18 +36,20 @@
 
             <div class=" px-5">
                 <div style="width: 450px;" class="shadow card p-5 text-center">
-                    <form action = "./process/loginAdminProcess.php" method ="POST">
+                    <form action="./process/loginAdminProcess.php" method="POST">
                         <h1>Masuk</h1>
                         <p class="py-3">
                             Hi welcome
                         </p>
                         <div class="form-group">
-                            <input type="text" id="username" placeholder="Username" class="form-control" />
+                            <input type="text" id="username" placeholder="Username" class="form-control"
+                                name="username" />
                         </div>
                         <div class="form-group">
-                            <input type="password" id="password" placeholder="Password" class="form-control w-100" />
+                            <input type="password" id="password" placeholder="Password" class="form-control w-100"
+                                name="password" />
                         </div>
-                        <button type="submit" name="loginAdmin" class="btn w-100 my-3 btn-dark">Sign in</button>
+                        <button type="submit" name="submit" class="btn w-100 my-3 btn-dark">Sign in</button>
                     </form>
                 </div>
             </div>
