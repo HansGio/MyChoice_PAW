@@ -32,10 +32,6 @@ p.about {
 	margin: 15px 0;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 051a16013cc524e14fceb04e42950712443e376e
 @media (min-width: 1200px) {
 	.container {
 		max-width: 1300px;
@@ -59,4 +55,20 @@ p.about {
 	100% {
 		top: 0px;
 	}
+}
+
+.profile-large {
+	object-fit: cover;
+	width: 250px;
+	height: 250px;
+}
+
+.profile-small {
+	position: relative;
+	top: -3px;
+	right: -5px;
+	margin-left: 5px;
+	object-fit: cover;
+	width: 25px;
+	height: 25px;
 }

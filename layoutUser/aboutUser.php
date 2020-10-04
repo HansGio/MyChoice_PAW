@@ -1,5 +1,5 @@
 <?php
-include '../dashboard/dashboardUser.php'
+include '../dashboard/dashboardUser.php';
 ?>
 
 <!-- ini test pull buat vellin -->

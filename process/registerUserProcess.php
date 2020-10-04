@@ -2,7 +2,7 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 
-include 'db.php';
+include_once 'db.php';
 session_start();
 $output = NULL;
 

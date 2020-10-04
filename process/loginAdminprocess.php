@@ -5,9 +5,9 @@ if(isset($_POST['submmit'])){
     $password = $_POST['password'];
     
     $sql = "select * from admin where username = '$username' and password ='$password'";
-    $query = mysql_query($con,$sql);
+    $query = mysqli_query($con,$sql);
 
-    $row = mysql_num_rows($query);
+    $row = mysqli_num_rows($query);
         if ($row == 1) {
             echo "login successful";
             $_SESSION['username'] = $username;
@@ -20,5 +20,3 @@ if(isset($_POST['submmit'])){
         }
     
 }
-
-?>

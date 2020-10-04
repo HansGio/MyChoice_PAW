@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../db.php'
+include_once '../db.php';
 ?>
 
 <!DOCTYPE html>
@@ -61,7 +61,9 @@ include '../db.php'
                     if (isset($_SESSION['isLogin'])) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="profileUser.php">Hi, <?= $_SESSION['user']['name'] ?><i class="fas fa-user-circle fa-lg" aria-hidden="true"></i></a>
+                            <a class="nav-link" href="profileUser.php">Hi, <?= $_SESSION['user']['name'] ?>
+                                <img src="../img/profile/profile<?= $_SESSION['user']['img_status'] == 0 ? "default" : $_SESSION['user']['id'] ?>.jpg" alt="Profile Picture" class="rounded-circle mx-auto mt-1 profile-small">
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../process/logoutUserProcess.php"><i class="fas fa-sign-out-alt fa-lg" aria-hidden="true"></i></a>
