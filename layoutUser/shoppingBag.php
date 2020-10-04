@@ -4,7 +4,7 @@ include '../dashboard/dashboardUser.php'
 <link rel="stylesheet" href="../css/checkOutUser.css">
 <br><br><br><br><br><br><br>
 
-<div class="container">
+<div class="container bg-abu">
     <div class="head">
         <div class="back">
             <button><i class="fas fa-reply"></i></button>

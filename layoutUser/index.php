@@ -18,7 +18,8 @@ include '../dashboard/dashboardUser.php'
                 <img style="min-width: auto;" class="d-block" src="../img/logo9_17_75651.png" alt="">
             </div>
             <div class="carousel-item">
-                <img class="d-block" src="../img/5aa737ee-d142-476f-b3d8-e863e2b56648-getty-688398000.jpg" alt="Third slide">
+                <img class="d-block" src="../img/5aa737ee-d142-476f-b3d8-e863e2b56648-getty-688398000.jpg"
+                    alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -32,10 +33,14 @@ include '../dashboard/dashboardUser.php'
     </div>
     <div class="row mb-3 mt-4">
         <div class="col">
-            <div style="background-color: #95a9e4;" class="h3 py-3 px-4 text-white">Man</div>
+            <a href="manListItemUser.php">
+                <div style="background-color: #95a9e4;" class="h3 py-3 px-4 text-white">Man</div>
+            </a>
         </div>
         <div class="col">
-            <div style="background-color: #e49595;" class="h3 py-3 px-4 text-white text-right">Woman</div>
+            <a href="womenListItemUser.php">
+                <div style="background-color: #e49595;" class="h3 py-3 px-4 text-white text-right">Woman</div>
+            </a>
         </div>
     </div>
     <div style="height: 400px; overflow: hidden;" class="row my-4">
@@ -54,7 +59,9 @@ include '../dashboard/dashboardUser.php'
     </div>
     <div class="row my-4">
         <div class="col-12">
-            <div style="background-color: #e4bb95;" class="h3 py-3 px-4 text-white">Weekly Recomendation</div>
+            <a href="rekomendationItems.php">
+                <div style="background-color: #e4bb95;" class="h3 py-3 px-4 text-white">Weekly Recomendation</div>
+            </a>
         </div>
     </div>
     <div class="row my-4">
