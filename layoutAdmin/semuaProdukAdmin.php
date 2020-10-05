@@ -1,14 +1,6 @@
 <?php
 include '../dashboard/dashboardAdmin.php'
-
 ?>
-
-<!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
 <div class="title">
     <h2>Daftar Produk</h2>
@@ -44,41 +36,38 @@ include '../dashboard/dashboardAdmin.php'
                 echo '<tr?><td colspan="7"> Tidak ada data </td>
             </tr>';
             } else {
-            $no = 1;
-            while ($all_item = mysqli_fetch_assoc($all_items)) {
+                $no = 1;
+                while ($all_item = mysqli_fetch_assoc($all_items)) {
             ?>
 
-            <tr>
-                <td> <?= $no ?></td>
-                <td>
-                    <div class="d-flex">
-                        <img src="../img/item/item<?= $all_item['img_status'] == 0 ? 'default' : $all_item['id'] ?>.jpg"
-                            alt="" style="width: 100px; ">
-                        <div class="offset-1">
-                            <?php $all_item['name'] ?>
-                            <br>
-                            Size S/M/L/XL
-                        </div>
-                    </div>
-                </td>
-                <td><?= $all_item['price'] ?></td>
-                <td>stock S = <?= $all_item['stock_s'] ?> <br>
-                    stock M = <?= $all_item['stock_m'] ?> <br>
-                    stock L = <?= $all_item['stock_l'] ?> <br>
-                </td>
-                <td>
-                    <?php $hasil = ($all_item['stock_s'] + $all_item['stock_m'] + $all_item['stock_l']);
+                    <tr>
+                        <td> <?= $no ?></td>
+                        <td>
+                            <div class="d-flex">
+                                <img src="../img/item/item<?= $all_item['img_status'] == 0 ? 'default' : $all_item['id'] ?>.jpg" alt="" style="width: 100px; ">
+                                <div class="offset-1">
+                                    <?php $all_item['name'] ?>
+                                    <br>
+                                    Size S/M/L/XL
+                                </div>
+                            </div>
+                        </td>
+                        <td><?= $all_item['price'] ?></td>
+                        <td>stock S = <?= $all_item['stock_s'] ?> <br>
+                            stock M = <?= $all_item['stock_m'] ?> <br>
+                            stock L = <?= $all_item['stock_l'] ?> <br>
+                        </td>
+                        <td>
+                            <?php $hasil = ($all_item['stock_s'] + $all_item['stock_m'] + $all_item['stock_l']);
                             echo $hasil;
                             ?> <br>
-                </td>
-                <td><?= $all_item['status'] ?></td>
-                <td>
-                    <a href="./editItemAdmin.php?id=' . $all_item['id'] . '" style="font-size: 40px;"><i
-                            class="fas fa-edit"></i></a>
-                    <a href="../deleteitemAdmin.php?id=' . $all_item['id'] . '" onClick="return confirm ( \'Yakin?\')"
-                        style="font-size: 40px;"><i class="fa fa-trash"></i></a>
-                </td>
-            </tr>
+                        </td>
+                        <td><?= $all_item['status'] ?></td>
+                        <td>
+                            <a href="./editItemAdmin.php?id= <?php $all_item['id'] ?>" style="font-size: 40px;"><i class="fas fa-edit"></i></a>
+                            <a href="../deleteitemAdmin.php?id= <?php $all_item['id'] ?>" onClick="return confirm ( 'Yakin?')" style="font-size: 40px;"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
 
             <?php
                     $no++;
