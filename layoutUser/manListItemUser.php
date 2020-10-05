@@ -9,7 +9,7 @@ include '../process/showManItemUserProcess.php';
     <div class="row">
         <div class="col-4 pt-5">
             <div class="back">
-                <a href="" style="background-color:transparent ;"><i class="text-dark fas fa-reply"></i></a>
+                <a href="../layoutUser" style="background-color:transparent ;"><i class="text-dark fas fa-reply"></i></a>
             </div>
         </div>
         <div class="col-4 d-flex justify-content-center">

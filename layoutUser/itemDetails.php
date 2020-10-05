@@ -8,7 +8,7 @@ include '../process/showItemDetailsUserProcess.php';
 <div class="container">
     <div class="head">
         <div class="back">
-            <button><i class="fas fa-reply"></i></button>
+            <a href="<?= $item['gender'] ?>ListItemUser.php"><i class="text-dark fas fa-reply"></i></a>
         </div>
         <div class="tittle text-center align-items-center col-sm-2 offset-sm-5" style="height: 50px;">
             <h2>Details</h2>
