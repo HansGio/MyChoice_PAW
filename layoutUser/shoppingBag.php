@@ -1,5 +1,6 @@
 <?php
-include '../dashboard/dashboardUser.php'
+include '../dashboard/dashboardUser.php';
+include '../process/shoppingBagUserProcess.php';
 ?>
 <link rel="stylesheet" href="../css/checkOutUser.css">
 <br><br><br><br><br><br><br>
@@ -14,35 +15,55 @@ include '../dashboard/dashboardUser.php'
         </div>
     </div>
 
-
-    <!-- Bagian ini di loop sesuai banyak nya belanjaan -->
-    <div class="belanjaan col-sm-10 offset-sm-1 d-flex" style="margin-top: 50px;">
-        <img src="../img/vIWkY3LiPq.jpg" alt="">
-        <div class="detail col-sm-10" style="padding-left: 20px;">
-            <h5>Kaus Hitam Latto</h5>
-            <small>Ukuran : XL</small>
-            <br><br>
-            <p>Rp. 250.000</p>
-            <div class="btn-group" role="group" aria-label="Basic example">
+    <?php
+    $total = 0;
+    while ($item = mysqli_fetch_assoc($query)) {
+    ?>
+        <!-- Bagian ini di loop sesuai banyak nya belanjaan -->
+        <div class="belanjaan col-sm-10 offset-sm-1 d-flex" style="margin-top: 50px;">
+            <img src="../img/item/item<?= $item['img_status'] == 0 ? 'default' : $item['itemid'] ?>.jpg" alt="">
+            <div class="detail col-sm-10" style="padding-left: 20px;">
+                <h5><?= $item['name'] ?></h5>
+                <small>Size : <?= strtoupper($item['size']) ?></small>
+                <br><br>
+                <p>Rp. <?= number_format($item['price'], 2, ",", ".") ?></p>
+                <!-- <div class="btn-group" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-secondary">-</button>
                 <label class="btn btn-secondary">2</label>
                 <button type="button" class="btn btn-secondary">+</button>
-            </div>
-            <br>
-            <div class="d-flex flex-row-reverse ">
+            </div> -->
+                <form action="" method="POST">
+                    <button class="btn" type="submit" name="" style="visibility: hidden;"></button>
+                    <div class="input-group mb-3 quantity-edit">
+                        <div class="input-group-prepend ">
+                            <button class="btn btn-light border-secondary" type="submit" name="reduce">-</button>
+                        </div>
+                        <input type="text" class="form-control text-center border-secondary" name="quantity" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="<?= $item['quantity'] ?>">
+                        <div class="input-group-append">
+                            <button class="btn btn-light border-secondary" type="submit" name="add">+</button>
+                        </div>
+                    </div>
+                    <br>
 
-                <!-- untuk ini tambahkan proses delete checkout -->
-                <div class="p-2 "><a href=".." style="color: red;"><i class="far fa-trash-alt"> Delete</i></a></div>
-            </div>
+                    <div class="d-flex flex-row-reverse ">
+                        <!-- untuk ini tambahkan proses delete checkout -->
+                        <input type="hidden" name="id" value="<?= $item['id'] ?>">
+                        <div class="p-2 "><button type="submit" name="delete" class="btn btn-outline-danger"><i class="far fa-trash-alt"></i> Delete</button></div>
+                    </div>
+                </form>
 
-            <div class="d-flex  mb-3 ">
-                <div class="mr-auto p-2 ">
-                    <h5 style="float: right;"></h5>
+                <div class="d-flex  mb-3 ">
+                    <div class="mr-auto p-2 ">
+                        <h5 style="float: right;"></h5>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <br><br>
+        <br><br>
+    <?php
+        $total += $item['quantity'] * $item['price'];
+    }
+    ?>
     <!-- sampai disini -->
 
 
@@ -52,7 +73,7 @@ include '../dashboard/dashboardUser.php'
             <div class="total-belanja col-sm-10">
                 <h5>Total Belanja</h5>
                 <!-- Harga nanti diubah menggunakan php -->
-                <h5><strong>Rp. 500.000</strong></h5>
+                <h5><strong>Rp. <?= number_format($total, 2, ",", ".") ?></strong></h5>
             </div>
             <div>
                 <br>

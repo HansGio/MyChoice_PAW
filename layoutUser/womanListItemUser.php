@@ -46,26 +46,24 @@ include '../process/showWomanItemUserProcess.php';
         </div>
     </div> -->
 
-    <!-- Ini bagian Item nya.. yang atas udah fix  -->
-    <!-- Ini masih pake data dummmy... ntr di loop aja bagian itu -->
-
     <div class="body d-flex flex-wrap justify-content-between">
 
-        <!-- dari sini -->
         <?php
         while ($item = mysqli_fetch_assoc($query)) {
         ?>
-            <a href="" class="card my-4">
+            <a href="itemDetails.php?id=<?= $item['id'] ?>" class="card my-4">
                 <img class="card-img-top" style="width: 16rem; height: 22rem; object-fit: cover;" src="../img/item/item<?= $item['img_status'] == 0 ? 'default' : $item['id'] ?>.jpg" alt="">
                 <div class="card-body ">
                     <h5 class="card-title"><?= $item['name'] ?></h5>
                     <p class="card-text">
                         <?php
                         $size = array();
+
                         if ($item['stock_s'] > 0) array_push($size, 'S');
                         if ($item['stock_m'] > 0) array_push($size, 'M');
                         if ($item['stock_l'] > 0) array_push($size, 'L');
                         if ($item['stock_xl'] > 0) array_push($size, 'XL');
+
                         echo implode("/", $size);
                         ?>
                     </p>
@@ -75,6 +73,7 @@ include '../process/showWomanItemUserProcess.php';
         <?php
         }
         ?>
+<<<<<<< HEAD
 
 
         <!-- sampe sini loop -->
@@ -121,3 +120,6 @@ include '../process/showWomanItemUserProcess.php';
 </footer>
 
 </html>
+=======
+    </div>
+>>>>>>> 9d48e7b2ea69a618724c13e27ca3f0155d11d02f
