@@ -66,12 +66,6 @@ p.about {
 	width: 150px;
 }
 
-
-
-
-
-
-
 @media (min-width: 1200px) {
 	.container {
 		max-width: 1300px;
@@ -117,4 +111,13 @@ p.about {
 	width: 1px;
 	background-color: rgb(145, 145, 145);
 	margin: 0px 10px;
+}
+a.card {
+	text-decoration: none !important;
+	transition: 200ms;
+}
+
+a.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }

@@ -18,8 +18,7 @@ include '../dashboard/dashboardUser.php'
                 <img style="min-width: auto;" class="d-block" src="../img/logo9_17_75651.png" alt="">
             </div>
             <div class="carousel-item">
-                <img class="d-block" src="../img/5aa737ee-d142-476f-b3d8-e863e2b56648-getty-688398000.jpg"
-                    alt="Third slide">
+                <img class="d-block" src="../img/5aa737ee-d142-476f-b3d8-e863e2b56648-getty-688398000.jpg" alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -38,7 +37,7 @@ include '../dashboard/dashboardUser.php'
             </a>
         </div>
         <div class="col">
-            <a href="womenListItemUser.php">
+            <a href="womanListItemUser.php">
                 <div style="background-color: #e49595;" class="h3 py-3 px-4 text-white text-right">Woman</div>
             </a>
         </div>

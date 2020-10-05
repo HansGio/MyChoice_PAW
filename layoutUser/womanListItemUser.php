@@ -1,6 +1,6 @@
 <?php
 include '../dashboard/dashboardUser.php';
-include '../process/showManItemUserProcess.php';
+include '../process/showWomanItemUserProcess.php';
 ?>
 <link rel="stylesheet" href="../css/checkOutUser.css">
 <br><br><br>
@@ -9,16 +9,16 @@ include '../process/showManItemUserProcess.php';
     <div class="row">
         <div class="col-4 pt-5">
             <div class="back">
-                <a href="" style="background-color:transparent ;"><i class="text-dark fas fa-reply"></i></a>
+                <a href="" style="background-color: transparent;"><i class="text-dark fas fa-reply"></i></a>
             </div>
         </div>
         <div class="col-4 d-flex justify-content-center">
-            <div class="d-flex justify-content-center align-items-center w-75" style="height: 100px; background-color: #5FB5EA; color: #FFFFFF;">
-                <span class="h2 text-center "> Man </span>
+            <div class="d-flex justify-content-center align-items-center w-75" style="height: 100px; background-color: #EFC0F2; color: #FFFFFF;">
+                <span class="h2 text-center "> Woman </span>
             </div>
         </div>
         <div class="col-4 pt-5">
-            <form method="POST">
+            <form action="">
                 <div class="input-group">
                     <input type="text" class="form-control border-secondary border-right-0" name="searchValue" placeholder="Search item.." aria-label="Recipient's username" aria-describedby="button-addon2">
                     <div class="input-group-append">
@@ -55,7 +55,7 @@ include '../process/showManItemUserProcess.php';
         <?php
         while ($item = mysqli_fetch_assoc($query)) {
         ?>
-            <a href="itemDetails.php?id=<?= $item['id'] ?>" class="card my-4">
+            <a href="" class="card my-4">
                 <img class="card-img-top" style="width: 16rem; height: 22rem; object-fit: cover;" src="../img/item/item<?= $item['img_status'] == 0 ? 'default' : $item['id'] ?>.jpg" alt="">
                 <div class="card-body ">
                     <h5 class="card-title"><?= $item['name'] ?></h5>
