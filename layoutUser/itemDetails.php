@@ -1,6 +1,6 @@
 <?php
 include '../dashboard/dashboardUser.php';
-include '../process/showItemDetailsUser.php';
+include '../process/showItemDetailsUserProcess.php';
 ?>
 <link rel="stylesheet" href="../css/checkOutUser.css">
 <br><br><br><br><br><br><br>
@@ -19,34 +19,33 @@ include '../process/showItemDetailsUser.php';
         <div class="items d-flex" style="margin: 40px;">
             <img src="../img/item/item<?= $item['img_status'] == 0 ? 'default' : $item['id'] ?>.jpg" alt="" style="width: 250px;">
             <div class="details col-sm-8" style="margin-left: 40px; margin-top: 20px;">
-                <!--  Ntar ganti,, ambil dari database php -->
-                <!-- Nama produk  -->
                 <h3><?= $item['name'] ?></h3>
                 <h5 class="py-3">Rp. <?= number_format($item['price'], 2, ",", ".") ?></h5>
                 <p class=""><?= $item['desc'] ?></p>
 
-                <form action="">
+                <form action="" method="POST">
                     <div class="form-group py-2">
                         <label>Avaible size: </label><br>
                         <?php
-                        $i = 0;
                         $size = array();
+
                         if ($item['stock_s'] > 0) array_push($size, 'S');
                         if ($item['stock_m'] > 0) array_push($size, 'M');
                         if ($item['stock_l'] > 0) array_push($size, 'L');
                         if ($item['stock_xl'] > 0) array_push($size, 'XL');
+
                         foreach ($size as $value) {
                         ?>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="sizeRadio" id="sizeRadio<?= $i ?>" value="<?= strtolower($value) ?>">
-                                <label class="form-check-label" for="sizeRadio<?= $i ?>"><?= $value ?></label>
+                                <input class="form-check-input" type="radio" name="size" id="sizeRadio<?= $value ?>" value="<?= strtolower($value) ?>">
+                                <label class="form-check-label" for="sizeRadio<?= $value ?>"><?= $value ?></label>
                             </div>
                         <?php
-                            $i++;
                         }
                         ?>
                     </div>
-                    <button type="submit" class="btn" style="background-color: #A5F1A4;">Add Item!</button>
+                    <input type="hidden" name="id" value="<?= $item['id'] ?>" />
+                    <button type="submit" class="btn" name="addItem" style="background-color: #A5F1A4;">Add Item!</button>
                 </form>
 
             </div>

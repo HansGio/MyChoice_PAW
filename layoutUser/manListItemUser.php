@@ -46,12 +46,8 @@ include '../process/showManItemUserProcess.php';
         </div>
     </div> -->
 
-    <!-- Ini bagian Item nya.. yang atas udah fix  -->
-    <!-- Ini masih pake data dummmy... ntr di loop aja bagian itu -->
-
     <div class="body d-flex flex-wrap justify-content-between">
 
-        <!-- dari sini -->
         <?php
         while ($item = mysqli_fetch_assoc($query)) {
         ?>
@@ -62,10 +58,12 @@ include '../process/showManItemUserProcess.php';
                     <p class="card-text">
                         <?php
                         $size = array();
+
                         if ($item['stock_s'] > 0) array_push($size, 'S');
                         if ($item['stock_m'] > 0) array_push($size, 'M');
                         if ($item['stock_l'] > 0) array_push($size, 'L');
                         if ($item['stock_xl'] > 0) array_push($size, 'XL');
+
                         echo implode("/", $size);
                         ?>
                     </p>
@@ -75,10 +73,4 @@ include '../process/showManItemUserProcess.php';
         <?php
         }
         ?>
-
-
-        <!-- sampe sini loop -->
-
-
-
     </div>

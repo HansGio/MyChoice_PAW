@@ -27,7 +27,7 @@ if (isset($_POST['register'])) {
         } else if (mysqli_num_rows($queryEmail) > 0) {
             $output = "Email already used.";
         } else {
-            $insert = mysqli_query($con, "INSERT INTO users(name, username, password, email, gender, address, birth_date, validated, vkey) VALUES ('$name', '$username', '$password', '$email', '$gender', '$address', '$birth_date', 0, '$vkey')") or die(mysqli_error($con));
+            $insert = mysqli_query($con, "INSERT INTO users(name, username, password, email, gender, address, birth_date, img_status, validated, vkey) VALUES ('$name', '$username', '$password', '$email', '$gender', '$address', '$birth_date', 0, 0, '$vkey')") or die(mysqli_error($con));
             if ($insert) {
                 require_once 'PHPMailer/Exception.php';
                 require_once 'PHPMailer/PHPMailer.php';
