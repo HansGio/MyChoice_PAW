@@ -76,3 +76,7 @@ include_once '../db.php';
             </div>
         </div>
     </nav>
+
+
+    </body>
+    </html>
