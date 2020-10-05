@@ -46,6 +46,7 @@ include '../dashboard/dashboardAdmin.php'
         </thead>
         <tbody>
             <?php
+            $all_items = mysqli_query($con, "SELECT * FROM item_list") or die(mysqli_error($con));
             $all_items_order = mysqli_query($con, "SELECT * FROM order_list") or die(mysqli_error($con));
 
             if (mysqli_num_rows($all_items_order) == 0) {
@@ -58,7 +59,16 @@ include '../dashboard/dashboardAdmin.php'
             '<tr>
                 <td>' . $no . '</td>
                 <td>' . $all_item_order['id'] . '</td>
-                <td>' . $all_item_order['informasi_produk'] . '</td>
+                <td>
+                    <div class="d-flex">
+                        <img src="../img/' . $all_item['gambar'] . '.jpg" alt="" style="width: 100px;">
+                        <div class="offset-1">
+                            ' . $all_item['nama_produk'] . '
+                            <br>
+                            Size S/M/L/XL
+                        </div>
+                    </div>
+                </td>
                 <td>' . $all_item_order['harga'] . '</td>
                 <td>' . $all_item_order['stock'] . '</td>
                 <td>' . $all_item_order['status'] . '</td>

@@ -19,17 +19,6 @@ include '../dashboard/dashboardAdmin.php'
         <h4><a href="produkAktifAdmin.php" style="border-bottom: 5px solid #4b6584;">Aktif</a></h4>
         <h4><a href="produkNonAktifAdmin.php">NonAktif</a></h4>
         <input type="text" name="searchAllItemFromAdmin" id="search" placeholder="Search">
-
-        <!-- <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Recipient's username"
-                            aria-label="Recipient's username" aria-describedby="button-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-                        </div>
-                    </div> -->
-
-        <!-- </div>
-                    <div class="search"> -->
     </div>
     <table class="table table-hover">
         <thead>
@@ -50,10 +39,10 @@ include '../dashboard/dashboardAdmin.php'
                 echo '<tr?><td colspan="7"> Tidak ada data </td>
             </tr>';
             } else {
-            $no = 1;
-            while ($all_item = mysqli_fetch_assoc($all_items)) {
-            echo
-            '<tr>
+                $no = 1;
+                while ($all_item = mysqli_fetch_assoc($all_items)) {
+                    echo
+                        '<tr>
                 <td>' . $no . '</td>
                 <td>
                     <div class="d-flex">
@@ -75,8 +64,8 @@ include '../dashboard/dashboardAdmin.php'
                         style="font-size: 40px;"><i class="fa fa-trash"></i></a>
                 </td>
             </tr>';
-            $no++;
-            }
+                    $no++;
+                }
             }
             ?>
         </tbody>
