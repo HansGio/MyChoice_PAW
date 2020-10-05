@@ -18,7 +18,10 @@ include '../dashboard/dashboardAdmin.php'
         <h4><a href="semuaProdukAdmin.php">Semua Produk</a></h4>
         <h4><a href="produkAktifAdmin.php" style="border-bottom: 5px solid #4b6584;">Aktif</a></h4>
         <h4><a href="produkNonAktifAdmin.php">NonAktif</a></h4>
-        <input type="text" name="searchAllItemFromAdmin" id="search" placeholder="Search">
+        <!-- <div class="search-box col-sm-2">
+            <input type="text" name="searchAllItemFromAdmin" id="search" placeholder="Search Items">
+            <a href="" class="search-btn col-1"><i class="fas fa-search"></i></a>
+        </div> -->
     </div>
     <table class="table table-hover">
         <thead>
@@ -26,6 +29,7 @@ include '../dashboard/dashboardAdmin.php'
                 <th>No</th>
                 <th>Informasi Produk</th>
                 <th>Harga $</th>
+                <th>Size</th>
                 <th>Stock #</th>
                 <th>Status</th>
                 <th>Pengaturan</th>
@@ -33,37 +37,48 @@ include '../dashboard/dashboardAdmin.php'
         </thead>
         <tbody>
             <?php
-            $all_items = mysqli_query($con, "SELECT * FROM item_list where status LIKE 'aktif' ") or die(mysqli_error($con));
-
+            $all_items = mysqli_query($con, "SELECT * FROM items where status LIKE 'active' ") or die(mysqli_error($con));
             if (mysqli_num_rows($all_items) == 0) {
                 echo '<tr?><td colspan="7"> Tidak ada data </td>
             </tr>';
             } else {
-                $no = 1;
-                while ($all_item = mysqli_fetch_assoc($all_items)) {
-                    echo
-                        '<tr>
-                <td>' . $no . '</td>
+            $no = 1;
+            while ($all_item = mysqli_fetch_assoc($all_items)) {
+            ?>
+
+            <tr>
+                <td> <?= $no ?></td>
                 <td>
                     <div class="d-flex">
-                        <img src="../img/' . $all_item['gambar'] . '.jpg" alt="" style="width: 100px;">
+                        <img src="../img/item/item<?= $all_item['img_status'] == 0 ? 'default' : $all_item['id'] ?>.jpg"
+                            alt="" style="width: 100px; ">
                         <div class="offset-1">
-                            ' . $all_item['nama_produk'] . '
+                            <?php $all_item['name'] ?>
                             <br>
                             Size S/M/L/XL
                         </div>
                     </div>
                 </td>
-                <td>' . $all_item['harga'] . '</td>
-                <td>' . $all_item['stock_produk'] . '</td>
-                <td>' . $all_item['status'] . '</td>
+                <td><?= $all_item['price'] ?></td>
+                <td>stock S = <?= $all_item['stock_s'] ?> <br>
+                    stock M = <?= $all_item['stock_m'] ?> <br>
+                    stock L = <?= $all_item['stock_l'] ?> <br>
+                </td>
+                <td>
+                    <?php $hasil = ($all_item['stock_s'] + $all_item['stock_m'] + $all_item['stock_l']);
+                            echo $hasil;
+                            ?> <br>
+                </td>
+                <td><?= $all_item['status'] ?></td>
                 <td>
                     <a href="./editItemAdmin.php?id=' . $all_item['id'] . '" style="font-size: 40px;"><i
                             class="fas fa-edit"></i></a>
                     <a href="../deleteitemAdmin.php?id=' . $all_item['id'] . '" onClick="return confirm ( \'Yakin?\')"
                         style="font-size: 40px;"><i class="fa fa-trash"></i></a>
                 </td>
-            </tr>';
+            </tr>
+
+            <?php
                     $no++;
                 }
             }

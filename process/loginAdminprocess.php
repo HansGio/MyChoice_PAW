@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
 
     $row = mysqli_num_rows($query);
     if ($row == 1) {
-        $_SESSION['username'] = $username;
+        $_SESSION['admin'] = $username;
         $_SESSION['isLoginAdmin'] = true;
         // echo "login successful";
         echo

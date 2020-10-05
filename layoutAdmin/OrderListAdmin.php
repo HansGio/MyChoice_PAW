@@ -46,7 +46,7 @@ include '../dashboard/dashboardAdmin.php'
         </thead>
         <tbody>
             <?php
-            $all_items = mysqli_query($con, "SELECT * FROM item_list") or die(mysqli_error($con));
+            $all_items = mysqli_query($con, "SELECT * FROM items") or die(mysqli_error($con));
             $all_items_order = mysqli_query($con, "SELECT * FROM order_list") or die(mysqli_error($con));
 
             if (mysqli_num_rows($all_items_order) == 0) {
