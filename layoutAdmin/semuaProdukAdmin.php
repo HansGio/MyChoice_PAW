@@ -36,37 +36,40 @@ include '../dashboard/dashboardAdmin.php'
                 echo '<tr?><td colspan="7"> Tidak ada data </td>
             </tr>';
             } else {
-                $no = 1;
-                while ($all_item = mysqli_fetch_assoc($all_items)) {
+            $no = 1;
+            while ($all_item = mysqli_fetch_assoc($all_items)) {
             ?>
-                    <tr>
-                        <td> <?= $no ?></td>
-                        <td>
-                            <div class="d-flex">
-                                <img src="../img/item/item<?= $all_item['img_status'] == 0 ? 'default' : $all_item['id'] ?>.jpg" alt="" style="width: 100px; ">
-                                <div class="offset-1">
-                                    <?php $all_item['name'] ?>
-                                    <br>
-                                    Size S/M/L/XL
-                                </div>
-                            </div>
-                        </td>
-                        <td><?= $all_item['price'] ?></td>
-                        <td>stock S = <?= $all_item['stock_s'] ?> <br>
-                            stock M = <?= $all_item['stock_m'] ?> <br>
-                            stock L = <?= $all_item['stock_l'] ?> <br>
-                        </td>
-                        <td>
-                            <?php $hasil = ($all_item['stock_s'] + $all_item['stock_m'] + $all_item['stock_l']);
+            <tr>
+                <td> <?= $no ?></td>
+                <td>
+                    <div class="d-flex">
+                        <img src="../img/item/item<?= $all_item['img_status'] == 0 ? 'default' : $all_item['id'] ?>.jpg"
+                            alt="" style="width: 100px; ">
+                        <div class="offset-1">
+                            <?php $all_item['name'] ?>
+                            <br>
+                            Size S/M/L/XL
+                        </div>
+                    </div>
+                </td>
+                <td><?= $all_item['price'] ?></td>
+                <td>stock S = <?= $all_item['stock_s'] ?> <br>
+                    stock M = <?= $all_item['stock_m'] ?> <br>
+                    stock L = <?= $all_item['stock_l'] ?> <br>
+                </td>
+                <td>
+                    <?php $hasil = ($all_item['stock_s'] + $all_item['stock_m'] + $all_item['stock_l']);
                             echo $hasil;
                             ?> <br>
-                        </td>
-                        <td><?= $all_item['status'] ?></td>
-                        <td>
-                            <a href="./process/editItemAdmin.php?id=<?= $all_item['id'] ?>" style="font-size: 40px;"><i class="fas fa-edit"></i></a>
-                            <a href="../process/deleteitemAdmin.php?id= <?= $all_item['id'] ?>" onClick="return confirm ( 'Yakin?')" style="font-size: 40px;"><i class="fa fa-trash"></i></a>
-                        </td>
-                    </tr>
+                </td>
+                <td><?= $all_item['status'] ?></td>
+                <td>
+                    <a href="./editItemAdmin.php?id=<?= $all_item['id'] ?>" style="font-size: 40px;"><i
+                            class="fas fa-edit"></i></a>
+                    <a href="../process/deleteitemAdmin.php?id= <?= $all_item['id'] ?>"
+                        onClick="return confirm ( 'Yakin?')" style="font-size: 40px;"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
 
             <?php
                     $no++;

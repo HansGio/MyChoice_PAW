@@ -78,7 +78,7 @@ include '../dashboard/dashboardAdmin.php'
                 </td>
                 <td><?= $all_item['status'] ?></td>
                 <td>
-                    <a href="./process/editItemAdmin.php?id=<?= $all_item['id'] ?>" style="font-size: 40px;"><i
+                    <a href="./editItemAdmin.php?id=<?= $all_item['id'] ?>" style="font-size: 40px;"><i
                             class="fas fa-edit"></i></a>
                     <a href="../process/deleteitemAdmin.php?id= <?= $all_item['id'] ?>"
                         onClick="return confirm ( 'Yakin?')" style="font-size: 40px;"><i class="fa fa-trash"></i></a>
