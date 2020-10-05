@@ -77,7 +77,7 @@ include '../process/shoppingBagUserProcess.php';
             </div>
             <div>
                 <br>
-                <button type="button" class="btn" style="background-color: #FFDCB4;"> Check Out ! </button>
+                <a href="checkOutUser.php" class="btn" style="background-color: #FFDCB4;"> Check Out ! </a>
             </div>
         </div>
     </div>
@@ -90,28 +90,28 @@ include '../process/shoppingBagUserProcess.php';
 <footer class="footer mt-auto">
     <hr>
     <div class="container-fluid text-center text-md-left" style="padding-left:50px">
-         <div class="row">
+        <div class="row">
             <div class="col-md-3 mt-md-0 mt-3">
                 <h5 class="text-uppercase"><i class="fa fa-info-circle"></i> Navigation</h5>
                 <ul class="list-unstyled">
-                <li>
-                    <a href="#!">About</a>
-                </li>
-                <li>
-                    <a href="#!">Help</a>
-                </li>
+                    <li>
+                        <a href="#!">About</a>
+                    </li>
+                    <li>
+                        <a href="#!">Help</a>
+                    </li>
                 </ul>
             </div>
             <hr class="clearfix w-100 d-md-none pb-3">
             <div class="col-md-3 mb-md-0 mb-3">
                 <h5 class="text-uppercase"><i class="fa fa-address-card"></i> Contact Info</h5>
                 <ul class="list-unstyled">
-                <li>
-                    <a href="#!">Whatsapp : 021-235-5313</a>
-                </li>
-                <li>
-                    <a href="#!">No Hp : 021-235-5311</a>
-                </li>
+                    <li>
+                        <a href="#!">Whatsapp : 021-235-5313</a>
+                    </li>
+                    <li>
+                        <a href="#!">No Hp : 021-235-5311</a>
+                    </li>
                 </ul>
             </div>
         </div>

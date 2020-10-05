@@ -1,9 +1,10 @@
 <?php
-include '../dashboard/dashboardUser.php'
+include '../dashboard/dashboardUser.php';
+include '../process/checkOutUserProcess.php';
 ?>
 
 <div class="container content">
-    <div class="bg-abu">
+    <div class="bg-abu pb-5">
         <div class="head">
             <div class="back">
                 <button><i class="fas fa-reply"></i></button>
@@ -16,57 +17,69 @@ include '../dashboard/dashboardUser.php'
 
 
         <!-- Data berupa alamat pembelian saat check out -->
-        <div class="dataUser col-sm-10 offset-sm-1"
-            style="background-color: #DBDBDB; border-radius: 10px; padding: 20px; margin-bottom: 20px;">
-            <p><strong>Alamat Pengiriman</strong></p>
-            <hr>
-            <p>Nama : </p>
-            <p>No. Telp : </p>
-            <p>Alamat :</p>
-            <p>Kota : </p>
+        <div class="dataUser col-sm-10 mx-auto my-3 p-4 rounded" style="background-color: #DBDBDB;">
+            <strong>Alamat Pengiriman</strong>
+            <hr class="my-2">
+            <p class="mb-0"><strong><?= $_SESSION['user']['name'] ?></strong></p>
+            <p class="mb-0">0812808021</p>
+            <p class="mb-0"><?= $_SESSION['user']['address'] ?></p>
         </div>
-       
 
 
-    <!-- Butuh php  -->
-    <!-- nanti pake foreach lalu data nya pake php -->
-    <!-- Data detail pembelian user -->
-    <div class="belanjaan col-sm-10 offset-sm-1 d-flex" style="padding:20px; margin-bottom:20px;" >
-        <img src="../img/vIWkY3LiPq.jpg" alt="">
-        <div class="detail col-sm-10" style="padding-left: 20px;">
-            <h5>Nama Barang</h5>
-            <p>Harga</p>
-            <p> Ukuran : </p>
-            <p> Jumlah : </p>
-            <div class="border"></div>
-            <div class="d-flex bd-highlight mb-3 ">
-                <div class="mr-auto p-2 bd-highlight">Sub Total</div>
-                <div class="p-2 bd-highlight">Total Harga</div>
+
+        <!-- Butuh php  -->
+        <!-- nanti pake foreach lalu data nya pake php -->
+        <!-- Data detail pembelian user -->
+        <?php
+        $bagTotal = 0;
+        $shipping = 0;
+        while ($item = mysqli_fetch_assoc($query)) {
+            $subtotal = $item['price'] * $item['quantity'];
+        ?>
+            <div class="belanjaan col-sm-10 mx-auto my-3 p-4 rounded">
+                <div class="row">
+                    <div class="col" style="flex: 0 0 100px;">
+                        <img class="rounded" src="../img/item/item<?= $item['img_status'] == 0 ? 'default' : $item['itemid'] ?>.jpg" alt="">
+                    </div>
+
+                    <div class="col">
+                        <h4><?= $item['name'] ?></h4>
+                        <h6 class="my-3">Rp. <?= number_format($item['price'], 2, ",", ".") ?></h6>
+                        <small class="d-block">Size: <?= strtoupper($item['size']) ?></small>
+                        <small class="d-block">Qty: <?= $item['quantity'] ?></small>
+                        <hr class="mt-5">
+                        <div class="d-flex justify-content-between">
+                            <h6>Subtotal</h6>
+                            <h6>Rp. <?= number_format($subtotal, 2, ",", ".") ?></h6>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+        <?php
+            $bagTotal += $subtotal;
+        }
+        $orderTotal = $bagTotal + $shipping;
+        ?>
+        <!--Batas Foreach -->
 
-    <!--Batas Foreach -->
-
-    <div class="payment col-sm-10 offset-sm-1" style="padding:10px; margin-bottom:20px; background-color: #DBDBDB; border-radius:10px">
-        <div class="d-flex bd-highlight mb-3 ">
-            <div class="mr-auto p-2 bd-highlight">Total Belanja</div>
-            <div class="p-2 bd-highlight">Rp. .......</div>
-        </div>
-        <div class="d-flex bd-highlight mb-3 ">
-            <div class="mr-auto p-2 bd-highlight">Ongkos Kirim</div>
-            <div class="p-2 bd-highlight">Rp. ........</div>
-        </div>
-        <div class="d-flex bd-highlight mb-3 ">
-            <div class="mr-auto p-2 bd-highlight">
-                <h5>Total Harga</h5>
+        <div class="payment col-sm-10 mx-auto my-3 p-4 rounded" style="background-color: #DBDBDB;">
+            <div class="d-flex bd-highlight justify-content-between">
+                <div class="px-2 bd-highlight">Bag Total</div>
+                <div class="px-2 bd-highlight">Rp. <?= number_format($bagTotal, 2, ",", ".") ?></div>
             </div>
-            <div class="p-2 bd-highlight">Rp. .........</div>
+            <div class="d-flex bd-highlight justify-content-between">
+                <div class="px-2 bd-highlight">Shipping</div>
+                <div class="px-2 bd-highlight">Rp. <?= number_format($shipping, 2, ",", ".") ?></div>
+            </div>
+            <hr class="my-3">
+            <div class="d-flex bd-highlight justify-content-between  mb-3 ">
+                <div class="h5 px-2 bd-highlight">Order Total</div>
+                <div class="h5 px-2 bd-highlight">Rp. <?= number_format($orderTotal, 2, ",", ".") ?></div>
+            </div>
+            <button type="button" class=" btn offset-sm-10 col-sm-2 btn" style="background-color: #FFDCB4;">Pay</button>
         </div>
-        <button type="button" class=" btn offset-sm-11 col-sm-1 btn" style="background-color: #FFDCB4;">Pay</button>
-    </div>
 
-    </div> 
+    </div>
 
 </div>
 
@@ -75,28 +88,28 @@ include '../dashboard/dashboardUser.php'
 <footer class="footer mt-auto">
     <hr>
     <div class="container-fluid text-center text-md-left" style="padding-left:50px">
-         <div class="row">
+        <div class="row">
             <div class="col-md-3 mt-md-0 mt-3">
                 <h5 class="text-uppercase"><i class="fa fa-info-circle"></i> Navigation</h5>
                 <ul class="list-unstyled">
-                <li>
-                    <a href="#!">About</a>
-                </li>
-                <li>
-                    <a href="#!">Help</a>
-                </li>
+                    <li>
+                        <a href="#!">About</a>
+                    </li>
+                    <li>
+                        <a href="#!">Help</a>
+                    </li>
                 </ul>
             </div>
             <hr class="clearfix w-100 d-md-none pb-3">
             <div class="col-md-3 mb-md-0 mb-3">
                 <h5 class="text-uppercase"><i class="fa fa-address-card"></i> Contact Info</h5>
                 <ul class="list-unstyled">
-                <li>
-                    <a href="#!">Whatsapp : 021-235-5313</a>
-                </li>
-                <li>
-                    <a href="#!">No Hp : 021-235-5311</a>
-                </li>
+                    <li>
+                        <a href="#!">Whatsapp : 021-235-5313</a>
+                    </li>
+                    <li>
+                        <a href="#!">No Hp : 021-235-5311</a>
+                    </li>
                 </ul>
             </div>
         </div>
