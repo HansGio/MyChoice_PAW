@@ -11,14 +11,14 @@ include '../dashboard/dashboardUser.php'
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block" src="../img/social-holding.jpg" alt="First slide">
+                <img class="d-block" src="../img/carousel-1.jpg" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block" src="../img/cute-pink-blur-gradation-wallpaper-preview.jpg" alt="Second slide">
-                <img style="min-width: auto;" class="d-block" src="../img/logo9_17_75651.png" alt="">
+                <img class="d-block" src="../img/carousel-2.jpg" alt="Second slide">
+                <!-- <img style="min-width: auto;" class="d-block" src="../img/logo9_17_75651.png" alt=""> -->
             </div>
             <div class="carousel-item">
-                <img class="d-block" src="../img/5aa737ee-d142-476f-b3d8-e863e2b56648-getty-688398000.jpg"
+                <img class="d-block" src="../img/carousel-3.jpg"
                     alt="Third slide">
             </div>
         </div>
@@ -45,16 +45,16 @@ include '../dashboard/dashboardUser.php'
     </div>
     <div style="height: 400px; overflow: hidden;" class="row my-4">
         <div class="col-3">
-            <img width="100%" height="100%" src="../img/vIWkY3LiPq.jpg" alt="" style="object-fit: cover;">
+            <img width="100%" height="100%" src="../img/object1.jpg" alt="" style="object-fit: cover;">
         </div>
         <div class="col-3">
-            <img width="100%" height="100%" src="../img/09.-Denim-Fashion-Pria.jpg" alt="" style="object-fit: cover;">
+            <img width="100%" height="100%" src="../img/object2.jpg" alt="" style="object-fit: cover;">
         </div>
         <div class=" col-3">
-            <img width="100%" height="100%" src="../img/09.-Denim-Fashion-Pria.jpg" alt="" style="object-fit: cover;">
+            <img width="100%" height="100%" src="../img/object3.jpg" alt="" style="object-fit: cover;">
         </div>
         <div class="col-3">
-            <img width="100%" height="100%" src="../img/09.-Denim-Fashion-Pria.jpg" alt="" style="object-fit: cover;">
+            <img width="100%" height="100%" src="../img/object4.jpg" alt="" style="object-fit: cover;">
         </div>
     </div>
     <div class="row my-4">
@@ -66,10 +66,47 @@ include '../dashboard/dashboardUser.php'
     </div>
     <div class="row my-4">
         <div class="col-12">
-            <img class="w-100" src="../img/social-holding.jpg" alt="First slide">
+            <img class="w-100" src="../img/footer.jpg" alt="First slide">
         </div>
     </div>
 </div>
+
+<!--footer-->
+
+<footer class="footer mt-auto">
+    <hr>
+    <div class="container-fluid text-center text-md-left" style="padding-left:50px">
+        <div class="row">
+            <div class="col-md-3 mt-md-0 mt-3">
+                <h5 class="text-uppercase"><i class="fa fa-info-circle"></i> Navigation</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!">About</a>
+                    </li>
+                    <li>
+                        <a href="#!">Help</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="clearfix w-100 d-md-none pb-3">
+            <div class="col-md-3 mb-md-0 mb-3">
+                <h5 class="text-uppercase"><i class="fa fa-address-card"></i> Contact Info</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!">Whatsapp : 021-235-5313</a>
+                    </li>
+                    <li>
+                        <a href="#!">No Hp : 021-235-5311</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-copyright text-center py-3">
+        Copyright © 2020 All Right Reserved | My Choice Team
+    </div>
+</footer>
 </body>
 
 </html>
