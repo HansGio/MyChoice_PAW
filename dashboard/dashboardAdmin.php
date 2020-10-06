@@ -32,23 +32,23 @@ if (!isset($_SESSION['isLoginAdmin']))
     <div id="app">
         <div class="sidebar">
             <div class="header">
-                <img src="../img/logo/logo.png" alt="" style="width: 200px;">
+                <img src="../img/logo/logo.png" alt="" style="width: 200px">
             </div>
             <div class="body">
                 <a href="../layoutAdmin/semuaProdukAdmin.php">
-                    <div class="item " id="daftar-menu">Daftar Produk</div>
+                    <div class="item" id="daftar-menu"><i class="fa fa-shopping-cart"></i> Daftar Produk</div>
                 </a>
                 <a href="../layoutAdmin/tambahProdukAdmin.php">
-                    <div class="item" id="tambah-menu">Tambah Produk</div>
+                    <div class="item" id="tambah-menu"><i class="fa fa-plus-square"></i> Tambah Produk</div>
                 </a>
                 <a href="../layoutAdmin/orderListAdmin.php">
-                    <div class="item" id="daftar-pesanan">Daftar Pesanan</div>
+                    <div class="item" id="daftar-pesanan"><i class="fa fa-list"></i> Daftar Pesanan</div>
                 </a>
                 <a href="../layoutAdmin/reportAdmin.php">
-                    <div class="item" id="laporan">Laporan</div>
+                    <div class="item" id="laporan"><i class="fa fa-money "></i> Laporan</div>
                 </a>
                 <a href="../process/logoutAdminProcess.php">
-                    <div class="item" id="keluar">Keluar</div>
+                    <div class="item" id="keluar"><i class="fa fa-sign-out "></i> Keluar</div>
                 </a>
             </div>
         </div>

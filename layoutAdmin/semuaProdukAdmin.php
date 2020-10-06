@@ -8,9 +8,9 @@ include '../dashboard/dashboardAdmin.php'
 </div>
 <div class="body">
     <div class="big-menu">
-        <h4><a href="semuaProdukAdmin.php" style="border-bottom: 5px solid #4b6584;">Semua Produk</a></h4>
-        <h4><a href="produkAktifAdmin.php">Aktif</a></h4>
-        <h4><a href="produkNonAktifAdmin.php">NonAktif</a></h4>
+        <h5><a href="semuaProdukAdmin.php" style="border-bottom: 5px solid #4b6584;">Semua Produk</a></h5>
+        <h5><a href="produkAktifAdmin.php">Aktif</a></h5>
+        <h5><a href="produkNonAktifAdmin.php">NonAktif</a></h5>
         <!-- <div class="search-box col-sm-2">
             <input type="text" name="searchAllItemFromAdmin" id="search" placeholder="Search Items">
             <a href="" class="search-btn"><i class="fas fa-search"></i></a>
