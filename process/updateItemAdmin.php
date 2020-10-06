@@ -30,6 +30,37 @@ if (isset($_POST['submit'])) {
     $price = $_POST['price'];
     $status = $_POST['status'];
     $gender = $_POST['gender'];
+    $img_status = $_POST['img_status'];
+    $file = $_FILES['image'];
+    if (!empty($file['name'])) {
+
+        $fileName = $_FILES['image']['name'];
+        $fileTmpName = $_FILES['image']['tmp_name'];
+        $fileSize = $_FILES['image']['size'];
+        $fileError = $_FILES['image']['error'];
+        $fileType = $_FILES['image']['type'];
+
+        $fileExt = explode('.', $fileName);
+        $fileExtActual = strtolower(end($fileExt));
+        $allowed = array('jpg', 'jpeg');
+
+        if (in_array($fileExtActual, $allowed)) {
+            if ($fileError == 0) {
+                if ($fileSize < 5000000) {
+                    $fileNameNew = "item" . $id . ".jpg";
+                    $fileDestination = "../img/item/" . $fileNameNew;
+                    move_uploaded_file($fileTmpName, $fileDestination);
+                    $img_status = 1;
+                } else {
+                    $output2 = 'Your file is too big (Max 5MB)';
+                }
+            } else {
+                $output2 = 'There was an eror uploading your file.';
+            }
+        } else {
+            $output2 = 'Incompatible file type.';
+        }
+    }
 
     // var_dump($status, $name, $stock_s, $stock_m, $stock_l,  $price, $description);
 
@@ -44,12 +75,13 @@ if (isset($_POST['submit'])) {
     stock_xl = '" . $stock_xl . "',
     status = '" . $status . "',
     description = '" . $description . "',
-    price = '" . $price . "' WHERE id=$id
+    img_status = '" . $img_status . "',
+    price = '" . $price . "' WHERE id = $id
     ") or die(mysqli_error($con));
     echo
         '<script>
-    alert("Edit berhasil"); window.history.back()
-</script>';
+    alert("Edit berhasil"); window.location = "../layoutAdmin/showItemAdmin.php";
+    </script>';
 } else {
     echo
         '<script>

@@ -67,12 +67,12 @@ if (isset($_POST['submit'])) {
         $tambahQuery = mysqli_query($con, $query) or die(mysqli_error($con));
         echo
             '<script>
-        alert("Edit berhasil"); window.history.back()
+        alert("Item berhasil dibuat!"); window.location = "../layoutAdmin/showItemAdmin.php";
         </script>';
     }
 } else {
     echo
         '<script>
-        alert("Failed"); window.history.back()
+        alert("Failed"); window.history.back();
     </script>';
 }

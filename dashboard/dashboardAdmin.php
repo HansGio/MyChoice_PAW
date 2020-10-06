@@ -35,7 +35,7 @@ if (!isset($_SESSION['isLoginAdmin']))
                 <img src="../img/logo/logo.png" alt="" style="width: 200px">
             </div>
             <div class="body">
-                <a href="../layoutAdmin/semuaProdukAdmin.php">
+                <a href="../layoutAdmin/showItemAdmin.php">
                     <div class="item" id="daftar-menu"><i class="fa fa-shopping-cart"></i> Daftar Produk</div>
                 </a>
                 <a href="../layoutAdmin/tambahProdukAdmin.php">

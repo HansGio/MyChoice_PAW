@@ -53,10 +53,10 @@ include '../dashboard/dashboardAdmin.php'
                 echo '<tr?><td colspan="7"> Tidak ada data </td>
             </tr>';
             } else {
-            $no = 1;
-            while ($all_item_order = mysqli_fetch_assoc($all_items_order)) {
-            echo
-            '<tr>
+                $no = 1;
+                while ($all_item_order = mysqli_fetch_assoc($all_items_order)) {
+                    echo
+                        '<tr>
                 <td>' . $no . '</td>
                 <td>' . $all_item_order['id'] . '</td>
                 <td>
@@ -77,8 +77,8 @@ include '../dashboard/dashboardAdmin.php'
                     <a href="../deleteitemAdmin.php?id=' . $all_item_order['id'] . '">Batal</a>
                 </td>
             </tr>';
-            $no++;
-            }
+                    $no++;
+                }
             }
             ?>
         </tbody>
