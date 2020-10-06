@@ -39,7 +39,7 @@
                     <form action="./process/loginAdminProcess.php" method="POST">
                         <h1>Masuk</h1>
                         <p class="py-3">
-                            Hi welcome
+                            Selamat Datang Admin!
                         </p>
                         <div class="form-group">
                             <input type="text" id="username" placeholder="Username" class="form-control"

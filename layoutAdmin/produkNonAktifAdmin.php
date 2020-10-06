@@ -15,9 +15,9 @@ include '../dashboard/dashboardAdmin.php'
 </div>
 <div class="body">
     <div class="big-menu">
-        <h4><a href="semuaProdukAdmin.php">Semua Produk</a></h4>
-        <h4><a href="produkAktifAdmin.php">Aktif</a></h4>
-        <h4><a href="produkNonAktifAdmin.php" style="border-bottom: 5px solid #4b6584;">NonAktif</a></h4>
+        <h5><a href="semuaProdukAdmin.php">Semua Produk</a></h5>
+        <h5><a href="produkAktifAdmin.php">Aktif</a></h5>
+        <h5><a href="produkNonAktifAdmin.php" style="border-bottom: 5px solid #4b6584;">NonAktif</a></h5>
         <!-- <input type="text" name="searchAllItemFromAdmin" id="search" placeholder="Search"> -->
 
         <!-- <div class="input-group mb-3">
