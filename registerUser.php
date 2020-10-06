@@ -32,7 +32,7 @@ if (!isset($_SESSION['isLoginUser'])) {
                 <div class=" px-5">
                     <div style="width: 450px;" class="shadow card p-5 mb-5 text-center">
                         <h1 class="text-center">Sign Up</h1>
-                        <p class="py-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p class="py-3">Create MyChoice Account to Continue Shopping</p>
                         <form class="text-left" method="POST">
                             <?php
                             if (isset($output)) {
@@ -54,7 +54,7 @@ if (!isset($_SESSION['isLoginUser'])) {
                             <div class="form-group">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text""><i class=" fas fa-birthday-cake"></i></span>
+                                        <span class="input-group-text"><i class=" fas fa-birthday-cake"></i></span>
                                     </div>
                                     <input type="date" class="form-control" name="birth_date" placeholder="Birthdate" value="<?= isset($_POST['birth_date']) ? $_POST['birth_date'] : "" ?>">
                                 </div>
