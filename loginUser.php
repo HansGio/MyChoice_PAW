@@ -32,8 +32,7 @@ if (!isset($_SESSION['isLoginUser'])) {
                     <div style="width: 450px;" class="shadow card p-5 text-center">
                         <h1>Sign In</h1>
                         <p class="py-3">
-                            Lorem ipsum sjdns j dsjk jdoj idoj joijij mnsdjand en onkdnsa osdnmwjnansnk
-                            nknsal.
+                            Welcome to MyChoice, Official Online Fashion Store in Indonesia. Please Sign In to Continue!
                         </p>
                         <form class="text-left" method="POST">
                             <div class="form-group">
