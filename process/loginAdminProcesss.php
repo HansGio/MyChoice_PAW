@@ -26,6 +26,5 @@ if (isset($_POST['submit'])) {
             '<script>
                 alert("Failed Success"); window.location = "../loginAdmin.php"
             </script>';
-        // header('location:loginAdmin.php');
     }
 }

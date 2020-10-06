@@ -27,7 +27,10 @@ if (isset($_POST['save'])) {
             if ($update) {
                 $select = mysqli_query($con, "SELECT * FROM users WHERE id = " . $id . " LIMIT 1") or die(mysqli_error($con));
                 $_SESSION['user'] = mysqli_fetch_assoc($select);
-                header('location: profileUser.php');
+                echo
+                    '<script>
+                window.location = "profileUser.php";
+            </script>';
             } else {
                 $output1 = 'Edit failed.';
             }
@@ -69,5 +72,8 @@ if (isset($_POST['save'])) {
         $output2 = 'Upload your picture first.';
     }
 } else if (isset($_POST['cancel'])) {
-    header('location: profileUser.php');
+    echo
+        '<script>
+                window.location = "profileUser.php";
+            </script>';
 }

@@ -25,6 +25,9 @@ if (isset($_POST['addItem'])) {
             }
         }
     } else {
-        header("location: ../loginUser.php");
+        echo
+            '<script>
+                window.location = "../loginUser.php";
+            </script>';
     }
 }
