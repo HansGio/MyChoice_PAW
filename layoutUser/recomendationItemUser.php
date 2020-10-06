@@ -1,6 +1,6 @@
 <?php
 include '../dashboard/dashboardUser.php';
-include '../process/showManItemUserProcess.php';
+include '../process/showRecomendationItemProcess.php';
 ?>
 <link rel="stylesheet" href="../css/checkOutUser.css">
 <br><br><br>
@@ -15,8 +15,8 @@ include '../process/showManItemUserProcess.php';
         </div>
         <div class="col-4 d-flex justify-content-center">
             <div class="d-flex justify-content-center align-items-center w-75"
-                style="height: 100px; background-color: #5FB5EA; color: #FFFFFF;">
-                <span class="h2 text-center "> Man </span>
+                style="height: 100px; background-color: #e4bb95; color: #FFFFFF;">
+                <span class="h2 text-center "> Weekly Recomendation </span>
             </div>
         </div>
         <div class="col-4 pt-5">
@@ -50,10 +50,14 @@ include '../process/showManItemUserProcess.php';
         </div>
     </div> -->
 
-    <div class="body d-flex flex-wrap justify-content-between">
+    <div class="body d-flex flex-wrap justify-content-around">
 
         <?php
+        $i = 0;
         while ($item = mysqli_fetch_assoc($query)) {
+            if ($i >= 8) {
+                break;
+            }
         ?>
         <a href="itemDetails.php?id=<?= $item['id'] ?>" class="card my-4">
             <img class="card-img-top" style="width: 16rem; height: 22rem; object-fit: cover;"
@@ -76,9 +80,9 @@ include '../process/showManItemUserProcess.php';
             </div>
         </a>
         <?php
+            $i++;
         }
         ?>
-
 
         <!-- sampe sini loop -->
 

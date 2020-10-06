@@ -30,22 +30,11 @@ if (isset($_POST['submit'])) {
     $price = $_POST['price'];
     $status = $_POST['status'];
     $gender = $_POST['gender'];
+    $query = "INSERT INTO items VALUES ('$name','$stock_s','$stock_m','$stock_l','$stock_xl','$desc','$price','$status','$gender')";
 
-    // var_dump($status, $name, $stock_s, $stock_m, $stock_l,  $price, $desc);
 
-    // $query = ;
 
-    $editQuery = mysqli_query($con, "UPDATE items SET 
-    name = '" . $name . "', 
-    gender = '" . $gender . "', 
-    stock_s = '" . $stock_s . "', 
-    stock_m = '" . $stock_m . "', 
-    stock_l = '" . $stock_l . "',
-    stock_xl = '" . $stock_xl . "',
-    status = '" . $status . "',
-    desc = '" . $desc . "',
-    price = '" . $price . "' WHERE id=$id
-    ") or die(mysqli_error($con));
+    $tambahQuery = mysqli_query($con, $query) or die(mysqli_error($con));
     echo
         '<script>
     alert("Edit berhasil"); window.history.back()
