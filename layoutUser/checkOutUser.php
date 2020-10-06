@@ -5,13 +5,11 @@ include '../process/checkOutUserProcess.php';
 
 <div class="container content">
     <div class="bg-abu pb-5">
-        <div class="head">
-            <div class="back">
-                <button><i class="fas fa-reply"></i></button>
-            </div>
-            <div class="tittle text-center align-items-center col-sm-2 offset-sm-5" style="height: auto; border-radius:10px">
-                <h3>Check Out</h3>
-            </div>
+        <div class="back">
+            <button><i class="fas fa-reply"></i></button>
+        </div>
+        <div class="tittle text-center align-items-center col-sm-2 offset-sm-5" style="height: auto; border-radius:10px">
+            <h3>Check Out</h3>
         </div>
         <br>
 
