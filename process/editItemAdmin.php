@@ -9,7 +9,7 @@ if (isset($_POST['submit'])) {
         !isset($_POST['stock_m']) ||
         !isset($_POST['stock_l']) ||
         !isset($_POST['stock_xl']) ||
-        !isset($_POST['desc']) ||
+        !isset($_POST['description']) ||
         !isset($_POST['price']) ||
         !isset($_POST['gender']) ||
         !isset($_POST['status'])
@@ -26,12 +26,12 @@ if (isset($_POST['submit'])) {
     $stock_m = $_POST['stock_m'];
     $stock_l = $_POST['stock_l'];
     $stock_xl = $_POST['stock_xl'];
-    $desc = $_POST['desc'];
+    $description = $_POST['description'];
     $price = $_POST['price'];
     $status = $_POST['status'];
     $gender = $_POST['gender'];
 
-    // var_dump($status, $name, $stock_s, $stock_m, $stock_l,  $price, $desc);
+    // var_dump($status, $name, $stock_s, $stock_m, $stock_l,  $price, $description);
 
     // $query = ;
 
@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
     stock_l = '" . $stock_l . "',
     stock_xl = '" . $stock_xl . "',
     status = '" . $status . "',
-    desc = '" . $desc . "',
+    description = '" . $description . "',
     price = '" . $price . "' WHERE id=$id
     ") or die(mysqli_error($con));
     echo
