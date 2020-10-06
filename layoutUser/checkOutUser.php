@@ -6,9 +6,11 @@ include '../process/checkOutUserProcess.php';
 <div class="container content">
     <div class="bg-abu pb-5">
         <div class="back">
-            <button><i class="fas fa-reply"></i></button>
+            <a href="./shoppingBag.php" style="background-color:transparent ;"><i
+                    class="text-dark fas fa-reply"></i></a>
         </div>
-        <div class="tittle text-center align-items-center col-sm-2 offset-sm-5" style="height: auto; border-radius:10px">
+        <div class="tittle text-center align-items-center col-sm-2 offset-sm-5"
+            style="height: auto; border-radius:10px">
             <h3>Check Out</h3>
         </div>
         <br>
@@ -34,25 +36,26 @@ include '../process/checkOutUserProcess.php';
         while ($item = mysqli_fetch_assoc($query)) {
             $subtotal = $item['price'] * $item['quantity'];
         ?>
-            <div class="belanjaan col-sm-10 mx-auto my-3 p-4 rounded">
-                <div class="row">
-                    <div class="col" style="flex: 0 0 100px;">
-                        <img class="rounded" src="../img/item/item<?= $item['img_status'] == 0 ? 'default' : $item['itemid'] ?>.jpg" alt="">
-                    </div>
+        <div class="belanjaan col-sm-10 mx-auto my-3 p-4 rounded">
+            <div class="row">
+                <div class="col" style="flex: 0 0 100px;">
+                    <img class="rounded"
+                        src="../img/item/item<?= $item['img_status'] == 0 ? 'default' : $item['itemid'] ?>.jpg" alt="">
+                </div>
 
-                    <div class="col">
-                        <h4><?= $item['name'] ?></h4>
-                        <h6 class="my-3">Rp. <?= number_format($item['price'], 2, ",", ".") ?></h6>
-                        <small class="d-block">Size: <?= strtoupper($item['size']) ?></small>
-                        <small class="d-block">Qty: <?= $item['quantity'] ?></small>
-                        <hr class="mt-5">
-                        <div class="d-flex justify-content-between">
-                            <h6>Subtotal</h6>
-                            <h6>Rp. <?= number_format($subtotal, 2, ",", ".") ?></h6>
-                        </div>
+                <div class="col">
+                    <h4><?= $item['name'] ?></h4>
+                    <h6 class="my-3">Rp. <?= number_format($item['price'], 2, ",", ".") ?></h6>
+                    <small class="d-block">Size: <?= strtoupper($item['size']) ?></small>
+                    <small class="d-block">Qty: <?= $item['quantity'] ?></small>
+                    <hr class="mt-5">
+                    <div class="d-flex justify-content-between">
+                        <h6>Subtotal</h6>
+                        <h6>Rp. <?= number_format($subtotal, 2, ",", ".") ?></h6>
                     </div>
                 </div>
             </div>
+        </div>
         <?php
             $bagTotal += $subtotal;
         }
