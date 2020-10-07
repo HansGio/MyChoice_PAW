@@ -6,7 +6,7 @@ $output = NULL;
 if (isset($_POST['login'])) {
     if (empty($_POST['username']) || empty($_POST['password'])) {
         $output = "Username or password can't be empty";
-    } else if ($_POST['username'] = "admin"  && $_POST['password'] = "admin") {
+    } else if ($_POST['username'] == "admin"  && $_POST['password'] == "admin") {
         $_SESSION['isLoginAdmin'] = true;
         header('Location:dashboard/dashboardAdmin.php');
     } else {
