@@ -20,7 +20,7 @@ include '../dashboard/dashboardAdmin.php'
                     <input type="hidden" id="id" name="id" value="<?= $data['id']; ?>">
                     <input type="hidden" id="img_status" name="img_status" value="<?= $data['img_status']; ?>">
                     <div class="form-group row">
-                        <label for="name" class="col-sm-2 col-form-label">Upload Gambar</label>
+                        <label for="name" class="col-sm-2 col-form-label">Update Gambar</label>
                         <div class="col-sm-10">
                             <input type="file" class="" name="image">
                         </div>

@@ -1,43 +1,29 @@
 <?php
-include '../dashboard/dashboardAdmin.php'
-?>
+include '../dashboard/dashboardAdmin.php';
 
-<!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+if (isset($_GET['action'])) {
+    $action = $_GET['action'];
+    $orderId = $_GET['id'];
+    $update = mysqli_query($con, "UPDATE order_list SET delivery_status='$action' WHERE id = $orderId") or die(mysqli_error($con));
+}
+?>
 
 <div class="title">
     <h2>Daftar Pesanan</h2>
 </div>
 </div>
+<div class="container">
+
+</div>
 <div class="body">
     <div class="big-menu">
         <h4 class="active-big-menu" style="margin-right: 800px;"> Semua Pesanan</h4>
-        <!-- <h4>Akrif</h4>
-        <h4>NonAktif</h4>-->
-        <!-- <div class="search-box">
-            <input type="text" name="searchAllItemFromAdmin" id="search" placeholder="Search Items">
-            <a href="" class="search-btn"><i class="fas fa-search"></i></a>
-        </div> -->
-
-        <!-- <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Recipient's username"
-                            aria-label="Recipient's username" aria-describedby="button-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-                        </div>
-                    </div> -->
-
-        <!-- </div> <div class="search"> -->
     </div>
     <table class="table table-hover">
         <thead>
             <tr>
-                <th>Nomor Pesanan</th>
                 <th>Kode Pesanan</th>
+                <th>Tanggal Pemesanan</th>
                 <th>Informasi Produk</th>
                 <th>Informasi Penerima</th>
                 <th>Total Harga</th>
@@ -49,17 +35,15 @@ include '../dashboard/dashboardAdmin.php'
             $all_items_order = mysqli_query($con, "SELECT ol.id, u.name, ol.address, ol.order_date, ol.delivery_status FROM order_list ol INNER JOIN users u ON ol.user_id = u.id WHERE ol.delivery_status = 'notset'") or die(mysqli_error($con));
 
             if (mysqli_num_rows($all_items_order) == 0) {
-                echo '<tr?><td colspan="7"> Tidak ada data </td>
-                </tr>';
+                echo '<tr?><td colspan="7"> Tidak ada data </td></tr>';
             } else {
-                $no = 1;
                 while ($item_order = mysqli_fetch_assoc($all_items_order)) {
                     $orderId = $item_order['id'];
                     $all_items_order_detail = mysqli_query($con, "SELECT od.id, od.order_id, od.item_id, od.quantity, od.size, od.price, i.name FROM order_details od INNER JOIN items i ON od.item_id = i.id WHERE order_id = $orderId") or die(mysqli_error($con));
             ?>
-                    '<tr>
-                        <td><?= $no ?></td>
+                    <tr>
                         <td><?= $item_order['id'] ?></td>
+                        <td><?= $item_order['order_date'] ?></td>
                         <td>
                             <ol>
                                 <?php
@@ -75,17 +59,16 @@ include '../dashboard/dashboardAdmin.php'
                                 ?>
                             </ol>
                         </td>
-                        <td><?= $item_order['address'] ?></td>
+                        <td><?= '<strong>' . $item_order['name'] . '</strong><br>' . $item_order['address'] ?></td>
                         <td>
                             <h5>Rp. <?= number_format($total, 2, ",", ".") ?></h5>
                         </td>
                         <td>
-                            <a class="btn btn-success" href="./editItemAdmin.php?id=' . $all_item_order['id'] . '">Kirim</a>
-                            <a class="btn btn-danger" href="../deleteitemAdmin.php?id=' . $all_item_order['id'] . '">Batal</a>
+                            <a class="btn btn-success" href="OrderListAdmin.php?action=sent&id=<?= $orderId ?>">Kirim</a>
+                            <a class="btn btn-danger" href="OrderListAdmin.php?action=canceled&id=<?= $orderId ?>">Batal</a>
                         </td>
-                    </tr>';
+                    </tr>
             <?php
-                    $no++;
                 }
             }
             ?>
