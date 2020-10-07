@@ -11,9 +11,9 @@ include '../process/showItemAdminProcess.php';
 <div class="body">
     <div class="container">
         <div class="big-menu">
-            <h5><a href="showItemAdmin.php" <?= !isset($menu) ? 'style="border-bottom: 3px solid #4b6584;"' : '' ?>>Semua Produk</a></h5>
-            <h5><a href="showItemAdmin.php?menu=active" <?= isset($menu) && $menu == 'active' ? 'style="border-bottom: 3px solid #4b6584;"' : '' ?>>Aktif</a></h5>
-            <h5><a href="showItemAdmin.php?menu=non-active" <?= isset($menu) && $menu == 'non-active' ? 'style="border-bottom: 3px solid #4b6584;"' : '' ?>>Nonaktif</a></h5>
+            <h5><a href="showItemAdmin.php" <?= !isset($status) ? 'style="border-bottom: 3px solid #4b6584;"' : '' ?>>Semua Produk</a></h5>
+            <h5><a href="showItemAdmin.php?status=active" <?= isset($status) && $status == 'active' ? 'style="border-bottom: 3px solid #4b6584;"' : '' ?>>Aktif</a></h5>
+            <h5><a href="showItemAdmin.php?status=non-active" <?= isset($status) && $status == 'non-active' ? 'style="border-bottom: 3px solid #4b6584;"' : '' ?>>Nonaktif</a></h5>
 
         </div>
         <table class="table table-hover">
