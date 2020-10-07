@@ -16,6 +16,8 @@ include '../dashboard/dashboardAdmin.php'
 <div class="body">
     <div class="big-menu">
         <h4 class="active-big-menu" style="margin-right: 600px;">Ringkasan Pembelian</h4>
+        <a href="../printPDF.php"> <button type="submit" class="btn btn-success w-100" name="submit">PRINT
+                PDF</button></a>
         <!-- <h4>Akrif</h4>
         <h4>NonAktif</h4> -->
         <!-- <div class="search-box">

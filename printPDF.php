@@ -1,42 +1,10 @@
 <?php
 include 'db.php';
-$all_item = mysqli_fetch_assoc($all_items);
 $no = 1;
+
 
 $html = '
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<title>Report Data</title>
-</head>
-
-<body>
-<table class="table table-hover">
-<thead>
-<tr>
-<th>No</th>
-<th>Informasi Produk</th>
-<th>Harga $</th>
-<th>Size</th>
-<th>Stock #</th>
-<th>Status</th>
-<th>Pengaturan</th>
-</tr>
-</thead>
-</table>
-</body>
-
-</html>
-';
-
-require_once __DIR__ . '/vendor/autoload.php';
-$mpdf = new \Mpdf\Mpdf();
-$mpdf->WriteHTML('<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -45,55 +13,66 @@ $mpdf->WriteHTML('<!DOCTYPE html>
 </head>
 
 <body>
+    <div>
+    <img src="img/logo/logo.png" alt="" style="float: right; width:200px">
+    <h1> Report Data <br> My Choice! </h1>
+    </div>
     <table border ="1" cellpadding="10" celspacing="0">
-        <thead>
             <tr>
-                <th>No</th>
+                <th>Nomor Pesanan</th>
+                <th>Kode Pesanan</th>
                 <th>Informasi Produk</th>
-                <th>Harga $</th>
-                <th>Size</th>
-                <th>Stock #</th>
-                <th>Status</th>
-                <th>Pengaturan</th>
-            </tr>
-        </thead>
-        
-    
-        <tr>
-            <td>' . $no . '</td>
-        <td>
-        <div class="d-flex">
-            <img src="../img/item/item' . $all_item['img_status'] == 0 ? 'default' : $all_item['id'] . '.jpg" alt=""
-                style="width: 100px; ">
-            <div class="offset-1">
-                ' . $all_item['name'] . '
-                <br>
-                Size S/M/L/XL
-            </div>
-        </div>
-    </td>
-    <td>' . $all_item['price'] . '</td>
-    <td>stock S = ' . $all_item['stock_s'] . ' <br>
-        stock M = ' . $all_item['stock_m'] . ' <br>
-        stock L = ' . $all_item['stock_l'] . ' <br>
-    </td>
-    <td>
-        $hasil = (' . $all_item['stock_s'] . ' + ' . $all_item['stock_m'] . ' + ' . $all_item['stock_l'] . ');
-        ' . $hasil . '
-        ?> <br>
-</td>
-<td>' . $all_item['status'] . '</td>
-</tr>
+                <th>Informasi Penerima</th>
+                <th>Total Harga</th>
+            </tr>';
 
-<?php
-                        $no++;
-                    }
-                }
-                ?>
-<h1></h1>
-</tbody>
+$all_items_order = mysqli_query($con, "SELECT ol.id, u.name, ol.address, ol.order_date, ol.delivery_status FROM order_list ol INNER JOIN users u ON ol.user_id = u.id WHERE ol.delivery_status = 'notset'") or die(mysqli_error($con));
+
+foreach ($all_items_order as $item_order) {
+    $html .= '<tr>
+        <td>' . $no . '</td>
+        <td>' . $item_order['id'] . '</td>
+        
+        <td>
+            <ol>';
+
+    $total = 0;
+    foreach ($all_items_order_detail as $items_order_detail) {
+        $orderId = $item_order['id'];
+        $all_items_order_detail = mysqli_query($con, "SELECT od.id, od.order_id, od.item_id, od.quantity, od.size, od.price, i.name FROM order_details od INNER JOIN items i ON od.item_id = i.id WHERE order_id = $orderId") or die(mysqli_error($con));
+
+        // TIDAK BISA DARI JOINAN !!
+        $name = $items_order_detail['name'];
+        $size = $items_order_detail['size'];
+        $quantity = $items_order_detail['quantity'];
+        $total += $items_order_detail['price'] * $quantity;
+
+        $html .= '<p>' . $name . '  
+        , Size : ' . $size  . '
+        , Qty : ' .  $quantity . '
+        </p>
+        ';
+    }
+
+    $html .= '</ol>
+        </td>
+            <td>' . $item_order['address'] . '</td>
+            <td>
+                <h5>Rp. ' . $total . '</h5>
+            </td>
+        </tr>';
+    $no++;
+}
+
+$html .= '
 </table>
+
+
 </body>
 
-</html>');
+</html>';
+
+require_once __DIR__ . '/vendor/autoload.php';
+$mpdf = new \Mpdf\Mpdf();
+$mpdf->WriteHTML($html);
 $mpdf->Output('report-data1.pdf', 'D');
