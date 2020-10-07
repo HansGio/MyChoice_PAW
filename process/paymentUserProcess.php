@@ -1,9 +1,28 @@
 <?php
+session_start();
 include_once '../db.php';
 
 
+$userId = $_SESSION['user']['id'];
+$address = $_SESSION['user']['address'];
+$auto = mysqli_query($con, "SHOW TABLE STATUS LIKE 'order_list'") or die(mysqli_error($con));
+$orderId = mysqli_fetch_assoc($auto)['Auto_increment'];
+$createOrder = mysqli_query($con, "INSERT INTO order_list (user_id, address, order_date, delivery_status) VALUE ($userId, '$address', NOW(), 'notset')") or die(mysqli_error($con));
+$queryBag = mysqli_query($con, "SELECT * FROM shopping_bags WHERE userid = $userId") or die(mysqli_error($con));
+while ($item = mysqli_fetch_assoc($queryBag)) {
+    $itemId = $item['itemid'];
+    $size = $item['size'];
+    $quantity = $item['quantity'];
+    $queryPrice = mysqli_query($con, "SELECT price FROM items WHERE id = $itemId LIMIT 1") or die(mysqli_error($con));
+    $price = mysqli_fetch_assoc($queryPrice)['price'];
+    $createDetail = mysqli_query($con, "INSERT INTO order_details (order_id, item_id, quantity, size, price) VALUE ($orderId, $itemId, $quantity, '$size', $price)") or die(mysqli_error($con));
+}
+mysqli_query($con, "DELETE FROM shopping_bags WHERE userId='$userId'") or die(mysqli_error($con));
 
-
+echo
+    '<script>
+        alert("Transaction success, order created!"); window.location = "../layoutUser";
+    </script>';
 
 
 
