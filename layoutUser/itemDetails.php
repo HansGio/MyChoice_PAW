@@ -3,15 +3,15 @@ include '../dashboard/dashboardUser.php';
 include '../process/showItemDetailsUserProcess.php';
 ?>
 <link rel="stylesheet" href="../css/checkOutUser.css">
-<br><br><br><br><br><br><br>
 
-<div class="container">
-    <div class="head">
+<div class="container content">
+    <div class="bg-abu pb-5 head">
         <div class="back">
             <a href="<?= $item['gender'] ?>ListItemUser.php"><i class="text-dark fas fa-reply"></i></a>
         </div>
-        <div class="tittle text-center align-items-center col-sm-2 offset-sm-5" style="height: 50px;">
-            <h2>Details</h2>
+        <div class="tittle text-center align-items-center col-sm-2 offset-sm-5"
+            style="height: auto; border-radius:10px">
+            <h3>Details</h3>
         </div>
     </div>
 
