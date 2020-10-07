@@ -47,7 +47,7 @@ include '../dashboard/dashboardAdmin.php'
         </thead>
         <tbody>
             <?php
-            $all_items_order = mysqli_query($con, "SELECT ol.id, u.name, ol.address, ol.order_date, ol.delivery_status FROM order_list ol INNER JOIN users u ON ol.user_id = u.id WHERE ol.delivery_status = 'notset'") or die(mysqli_error($con));
+            $all_items_order = mysqli_query($con, "SELECT ol.id, u.name, ol.address, ol.order_date, ol.delivery_status FROM order_list ol INNER JOIN users u ON ol.user_id = u.id WHERE ol.delivery_status = 'active' or ol.delivery_status = 'not-active' ") or die(mysqli_error($con));
 
             if (mysqli_num_rows($all_items_order) == 0) {
                 echo '<tr?><td colspan="7"> Tidak ada data </td>
