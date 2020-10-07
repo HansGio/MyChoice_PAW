@@ -13,7 +13,7 @@ include '../process/showItemDetailsUserProcess.php';
             style="height: auto; border-radius:10px">
             <h3>Details</h3>
         </div>
-    </div>
+    
 
     <div class="body offset-sm-1">
         <div class="items d-flex" style="margin: 40px;">
@@ -49,6 +49,7 @@ include '../process/showItemDetailsUserProcess.php';
                 </form>
 
             </div>
+        </div>
         </div>
     </div>
 
