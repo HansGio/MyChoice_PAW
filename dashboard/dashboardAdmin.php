@@ -24,7 +24,8 @@ if (!isset($_SESSION['isLoginAdmin']))
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Admin Corner</title>
 </head>
 
@@ -47,6 +48,10 @@ if (!isset($_SESSION['isLoginAdmin']))
                 <a href="../layoutAdmin/reportAdmin.php">
                     <div class="item" id="laporan"><i class="fa fa-money "></i> Laporan</div>
                 </a>
+                <a href="../layoutAdmin/contactUsAdmin.php">
+                    <div class="item" id="laporan"><i class="fa fa-money "></i> Contact Us</div>
+                </a>
+
                 <a href="../process/logoutAdminProcess.php">
                     <div class="item" id="keluar"><i class="fa fa-sign-out "></i> Keluar</div>
                 </a>

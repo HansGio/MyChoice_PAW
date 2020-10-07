@@ -127,3 +127,9 @@ a.card:hover {
 .quantity-edit {
 	width: 120px !important;
 }
+
+.maps{
+	width:100%;
+	height:350px;
+	margin:30px 0px;
+}
