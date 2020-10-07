@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ($_SESSION['isLoginAdmin']) {
-    header('location: layoutAdmin');
+    header('location: dashboard/dashboardAdmin.php');
 } else {
     header('location: layoutUser');
 }

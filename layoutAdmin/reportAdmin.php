@@ -18,10 +18,10 @@ include '../dashboard/dashboardAdmin.php'
         <h4 class="active-big-menu" style="margin-right: 600px;">Ringkasan Pembelian</h4>
         <!-- <h4>Akrif</h4>
         <h4>NonAktif</h4> -->
-        <div class="search-box">
+        <!-- <div class="search-box">
             <input type="text" name="searchAllItemFromAdmin" id="search" placeholder="Search Items">
             <a href="" class="search-btn"><i class="fas fa-search"></i></a>
-        </div>
+        </div> -->
         <!-- <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Recipient's username"
                             aria-label="Recipient's username" aria-describedby="button-addon2">
@@ -51,10 +51,10 @@ include '../dashboard/dashboardAdmin.php'
                 echo '<tr?><td colspan="7"> Tidak ada data </td>
             </tr>';
             } else {
-                $no = 1;
-                while ($all_item = mysqli_fetch_assoc($all_items)) {
-                    echo
-                        '<tr>
+            $no = 1;
+            while ($all_item = mysqli_fetch_assoc($all_items)) {
+            echo
+            '<tr>
                 <td>' . $no . '</td>
                 <td>' . $all_item['informasi_produk'] . '</td>
                 <td>' . $all_item['harga'] . '</td>
@@ -66,8 +66,8 @@ include '../dashboard/dashboardAdmin.php'
                         onClick="return confirm ( \'Yakin?\')"><i class="fa fa-trash"></i></a>
                 </td>
             </tr>';
-                    $no++;
-                }
+            $no++;
+            }
             }
             ?>
         </tbody>

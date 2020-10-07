@@ -18,10 +18,10 @@ include '../dashboard/dashboardAdmin.php'
         <h4 class="active-big-menu" style="margin-right: 800px;"> Semua Pesanan</h4>
         <!-- <h4>Akrif</h4>
         <h4>NonAktif</h4>-->
-        <div class="search-box">
+        <!-- <div class="search-box">
             <input type="text" name="searchAllItemFromAdmin" id="search" placeholder="Search Items">
             <a href="" class="search-btn"><i class="fas fa-search"></i></a>
-        </div>
+        </div> -->
 
         <!-- <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Recipient's username"
@@ -53,10 +53,10 @@ include '../dashboard/dashboardAdmin.php'
                 echo '<tr?><td colspan="7"> Tidak ada data </td>
             </tr>';
             } else {
-                $no = 1;
-                while ($all_item_order = mysqli_fetch_assoc($all_items_order)) {
-                    echo
-                        '<tr>
+            $no = 1;
+            while ($all_item_order = mysqli_fetch_assoc($all_items_order)) {
+            echo
+            '<tr>
                 <td>' . $no . '</td>
                 <td>' . $all_item_order['id'] . '</td>
                 <td>
@@ -77,8 +77,8 @@ include '../dashboard/dashboardAdmin.php'
                     <a href="../deleteitemAdmin.php?id=' . $all_item_order['id'] . '">Batal</a>
                 </td>
             </tr>';
-                    $no++;
-                }
+            $no++;
+            }
             }
             ?>
         </tbody>
