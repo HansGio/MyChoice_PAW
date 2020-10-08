@@ -63,7 +63,7 @@ include '../dashboard/dashboardAdmin.php'
                     <div class="form-group row">
                         <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
                         <div class="col-sm-10">
-                            <textarea class="form-control" id="deskripsi" rows="5" name="description"><?= $data['description']; ?>"</textarea>
+                            <textarea class="form-control" id="deskripsi" rows="5" name="description"><?= $data['description']; ?></textarea>
                         </div>
                     </div>
                     <div class="form-group row">
