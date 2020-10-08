@@ -25,7 +25,7 @@ if (!isset($_SESSION['isLoginUser'])) {
 
     <body>
         <div class="container text-center min-vh-100">
-            <img class="logo-img pt-4" src="img/logo/logo.png" alt="">
+            <a href="index.php"><img class="logo-img pt-4" src="img/logo/logo.png" alt=""></a>
             <div class=" d-flex pt-5 justify-content-around">
 
                 <div class=" px-5">
