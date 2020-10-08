@@ -2,4 +2,4 @@
 session_start();
 session_unset();
 session_destroy();
-header("location: ../loginAdmin.php");
+header("location: ../loginUser.php");
