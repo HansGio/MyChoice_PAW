@@ -78,7 +78,7 @@ include '../process/showItemAdminProcess.php';
                             <td>
                                 <h3>
                                     <a href="./editItemAdmin.php?id=<?= $all_item['id'] ?>"><i class=" text-dark fas fa-edit"></i></a>
-                                    <a href="../process/deleteitemAdmin.php?id= <?= $all_item['id'] ?>" onClick="return confirm ( 'Yakin?')"><i class=" text-dark fa fa-trash"></i></a>
+                                    <a href="../process/deleteItemAdmin.php?id= <?= $all_item['id'] ?>" onClick="return confirm ( 'Yakin?')"><i class=" text-dark fa fa-trash"></i></a>
                                 </h3>
                             </td>
                         </tr>
