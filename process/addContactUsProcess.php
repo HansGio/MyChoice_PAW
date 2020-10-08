@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
 
     // $query = ;
 
-    $editQuery = mysqli_query($con, "INSERT INTO contact_us VALUES ('$id', '$name','$email','$phone_number','$message') ") or die(mysqli_error($con));
+    $editQuery = mysqli_query($con, "INSERT INTO contact_us(name, email, phone_number, message) VALUES ('$name','$email','$phone_number','$message') ") or die(mysqli_error($con));
     echo
         '<script>
     alert("Success Send");window.location = "../layoutUser";
