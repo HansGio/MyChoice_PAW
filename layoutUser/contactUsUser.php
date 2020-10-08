@@ -13,23 +13,23 @@ include '../dashboard/dashboardUser.php'
 
                 <div class="form-group col-xs4">
                     <label class="label text-left w-100">Name</label>
-                    <input name="name" class="form-control" type="text" placeholder="Name">
+                    <input name="name" class="form-control" type="text" placeholder="Name" required>
                 </div>
 
                 <div class="form-group">
                     <label class="label text-left w-100">Email</label>
-                    <input name="email" class="form-control" type="email" placeholder="Email">
+                    <input name="email" class="form-control" type="email" placeholder="Email" required>
                 </div>
 
                 <div class="form-group">
                     <label class="label text-left w-100">Phone Number</label>
-                    <input name="phone_number" class="form-control" type="number" placeholder="Phone Number">
+                    <input name="phone_number" class="form-control" type="number" placeholder="Phone Number" required>
                 </div>
 
                 <div class="form-group">
                     <label class="label text-left w-100">Message</label>
                     <textarea name="message" class="form-control" type="text" rows="5"
-                        placeholder="Type your message here"></textarea>
+                        placeholder="Type your message here" required></textarea>
                 </div>
 
                 <div class="field is-grouped">
