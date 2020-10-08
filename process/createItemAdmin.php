@@ -63,7 +63,7 @@ if (isset($_POST['submit'])) {
                 $output2 = 'Incompatible file type.';
             }
         }
-        $query = "INSERT INTO items VALUES ('','$name','$gender','$stock_s','$stock_m','$stock_l','$stock_xl','$status','$description','$price', '$img_status')";
+        $query = "INSERT INTO items(name,gender,stock_s,stock_m,stock_l,stock_xl,status,description,price,img_status) VALUES ('$name','$gender','$stock_s','$stock_m','$stock_l','$stock_xl','$status','$description','$price', '$img_status')";
         $tambahQuery = mysqli_query($con, $query) or die(mysqli_error($con));
         echo
             '<script>
