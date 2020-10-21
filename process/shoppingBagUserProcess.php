@@ -1,7 +1,7 @@
 <?php
 include_once '../db.php';
 
-if (isset($_SESSION['isLoggeiInUser'])) {
+if (isset($_SESSION['isLoginUser'])) {
 
     $userId = $_SESSION['user']['id'];
 
